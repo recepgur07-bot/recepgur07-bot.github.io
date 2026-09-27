@@ -1,5 +1,7 @@
 ---
-source: recepgur07-bot.github.io/tr/memora/kilavuz.md
+source:
+  - recepgur07-bot.github.io/tr/memora/kilavuz.md
+  - memora/Sources/Memora/Resources/Localizable.xcstrings
 layout: default
 lang: en
 title: Memora user guide

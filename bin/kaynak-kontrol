@@ -6,8 +6,12 @@ yollar `projelerim/` klasörüne görelidir). Kaynağın son değişikliği sayf
 yeniyse sayfa ESKİ sayılır. Zaman: dosya git'te temizse son commit, değilse
 diskteki değişiklik zamanı.
 
+`source:` alanı olmayan sayfa sorundur; bilinçli istisna `kaynaksiz: <gerekçe>` ile yazılır.
+Zaman karşılaştırması bir İNCELEME TETİKLEYİCİSİDİR, doğruluk kanıtı değildir:
+GÜNCEL, sayfanın kaynağa uyduğunu değil, kaynağın sayfadan sonra değişmediğini söyler.
+
 Ayrıca `_data/apps.yml` içinde `page: true` olan her uygulamanın iki dilde
-sayfası olduğunu denetler. Çıkış kodu: sorun varsa 1.
+sayfası, `guide: true` olanın iki dilde kılavuzu olduğunu denetler. Çıkış kodu: sorun varsa 1.
 """
 import os, re, subprocess, sys
 from pathlib import Path
@@ -54,7 +58,11 @@ for sayfa in sorted(list(SITE.glob("tr/**/*.md")) + list(SITE.glob("en/**/*.md")
     ad = sayfa.relative_to(SITE)
     ks = kaynaklar(on_bilgi(sayfa))
     if not ks:
-        print(f"KAYNAKSIZ  {ad}")
+        if re.search(r"^kaynaksiz:[ \t]*\S", on_bilgi(sayfa), re.M):
+            print(f"İSTİSNA    {ad} (kaynaksiz)")
+        else:
+            print(f"KAYNAKSIZ  {ad} — source: ya da kaynaksiz: <gerekçe> ekle")
+            sorun += 1
         continue
     t = degisim(sayfa)
     for k in ks:
@@ -75,6 +83,11 @@ for blok in re.split(r"\n- slug: ", "\n" + apps)[1:]:
         for dil in ("tr", "en"):
             if not (SITE / dil / slug / "index.md").exists():
                 print(f"SAYFA YOK  {dil}/{slug}/index.md (apps.yml page: true)")
+                sorun += 1
+    if re.search(r"^\s*guide: true", blok, re.M):
+        for yol in (f"tr/{slug}/kilavuz.md", f"en/{slug}/guide.md"):
+            if not (SITE / yol).exists():
+                print(f"SAYFA YOK  {yol} (apps.yml guide: true)")
                 sorun += 1
 
 print("-" * 40)

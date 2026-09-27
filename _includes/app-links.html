@@ -12,8 +12,8 @@ Bir uygulamanın bilgi kutusu ve bağlantıları. Kullanım: {% include app-link
 <ul class="actions">
   <li><a class="button" href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
   {%- if include.guide %}
-  <li><a href="{{ include.guide | relative_url }}">{{ t.guide }}</a></li>
+  <li><a href="{{ include.guide | relative_url }}">{{ t.guide }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
   {%- endif %}
-  <li><a href="{{ app.privacy }}">{{ t.privacy }}</a></li>
-  <li><a href="{{ app.support }}">{{ t.support }}</a></li>
+  <li><a href="{{ app.privacy }}">{{ t.privacy }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
+  <li><a href="{{ app.support }}">{{ t.support }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
 </ul>

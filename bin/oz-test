@@ -6,30 +6,66 @@ cd "${0:A:h}/.."
 T=$(mktemp -d); trap 'rm -rf "$T"' EXIT
 basari=0
 
-# 1) yapi-kontrol: iki h1, başlık atlaması, kırık bağlantı, olmayan çapa, lang yok
-mkdir -p "$T/site/a"
-print '<html lang="tr"><body><h1>x</h1><h1>y</h1><h4>z</h4><a href="/yok/">k</a><a href="#bos">c</a></body></html>' > "$T/site/index.html"
-print '<html><body><h1>x</h1></body></html>' > "$T/site/a/index.html"
-if bin/yapi-kontrol "$T/site" > "$T/y.txt"; then print "BAŞARISIZ: yapi-kontrol bozuk siteyi geçirdi"; basari=1
-else
-  for bek in "h1 sayısı 2" "başlık atlaması" "kırık bağlantı /yok/" "çapa yok #bos" "lang yok"; do
-    grep -q -- "$bek" "$T/y.txt" || { print "BAŞARISIZ: yapi-kontrol '$bek' bulmadı"; basari=1; }
+bekle() {  # bekle <denetçi-adı> <çıktı-dosyası> <beklenen>...
+  local ad=$1 dosya=$2; shift 2
+  for bek in "$@"; do
+    grep -qF -- "$bek" "$dosya" || { print "BAŞARISIZ: $ad '$bek' bulmadı"; basari=1; }
   done
+}
+temiz_olmali() {  # temiz_olmali <denetçi-adı> <çıktı-dosyası> <olmaması-gereken>...
+  local ad=$1 dosya=$2; shift 2
+  for yok in "$@"; do
+    ! grep -qF -- "$yok" "$dosya" || { print "BAŞARISIZ: $ad sağlam örneğe '$yok' dedi"; basari=1; }
+  done
+}
+
+# 1) yapi-kontrol
+#    iki h1, başlık atlaması, kırık bağlantı, olmayan çapa, lang yok, kökte izinsiz ad,
+#    geri bağlamayan dil karşılığı, var olmayan dil karşılığı; göreli bağlantı doğru çözülür
+S="$T/site"; mkdir -p "$S/tr/a" "$S/en/a" "$S/tr/b" "$S/memora"
+print '<html lang="tr"><body><h1>x</h1><h1>y</h1><h4>z</h4><a href="/yok/">k</a><a href="#bos">c</a></body></html>' > "$S/index.html"
+print '<html><body><h1>x</h1><a href="../b/">göreli sağlam</a><a href="c/">göreli kırık</a></body></html>' > "$S/tr/a/index.html"
+print '<html lang="tr"><body><h1>b</h1></body></html>' > "$S/tr/b/index.html"
+print '<html lang="tr"><head><link rel="alternate" hreflang="en" href="https://ornek.io/en/a/"></head><body><h1>g</h1></body></html>' > "$S/tr/b/g.html"
+print '<html lang="en"><head><link rel="alternate" hreflang="tr" href="https://ornek.io/tr/yok/"></head><body><h1>a</h1></body></html>' > "$S/en/a/index.html"
+print '<html lang="tr"><body><h1>eski</h1></body></html>' > "$S/memora/index.html"
+print x > "$S/oneday-privacy.html"
+if bin/yapi-kontrol "$S" > "$T/y.txt"; then print "BAŞARISIZ: yapi-kontrol bozuk siteyi geçirdi"; basari=1
+else
+  bekle yapi-kontrol "$T/y.txt" "h1 sayısı 2" "başlık atlaması" "kırık bağlantı /yok/" "çapa yok #bos" \
+    "lang yok" "kırık bağlantı c/" "izinsiz ad ['memora', 'oneday-privacy.html']" \
+    "dil karşılığı yok /tr/yok/" "dil karşılığı geri bağlamıyor /en/a/"
+  temiz_olmali yapi-kontrol "$T/y.txt" "kırık bağlantı ../b/"
 fi
 
-# 2) kaynak-kontrol: kaynaktan eski sayfa, olmayan kaynak, eksik uygulama sayfası
-mkdir -p "$T/p/site/bin" "$T/p/site/tr/x" "$T/p/site/_data"
-cp bin/kaynak-kontrol "$T/p/site/bin/"
-print -- "---\nsource: kaynak.md\n---\nx" > "$T/p/site/tr/x/index.md"
-print -- "---\nsource:\n  - yok.md\n---\nx" > "$T/p/site/tr/x/b.md"
-print -- "- slug: x\n  page: true" > "$T/p/site/_data/apps.yml"
-touch -t 202601010000 "$T/p/site/tr/x/index.md"; print k > "$T/p/kaynak.md"
-if "$T/p/site/bin/kaynak-kontrol" > "$T/k.txt"; then print "BAŞARISIZ: kaynak-kontrol sorunları geçirdi"; basari=1
+# 2) kaynak-kontrol
+#    kaynaktan eski sayfa (mtime), olmayan kaynak, eksik sayfa ve kılavuz, gerekçesiz kaynaksız sayfa,
+#    çoklu kaynakta yalnız biri yeni, git'te temiz dosyada commit zamanı esas
+P="$T/p"; mkdir -p "$P/site/bin" "$P/site/tr/x" "$P/site/_data" "$P/g"
+cp bin/kaynak-kontrol "$P/site/bin/"
+print -- "---\nsource: kaynak.md\n---\nx" > "$P/site/tr/x/index.md"
+print -- "---\nsource:\n  - yok.md\n---\nx" > "$P/site/tr/x/b.md"
+print -- "---\ntitle: x\n---\nx" > "$P/site/tr/x/c.md"
+print -- "---\nkaynaksiz: bilinçli boş\n---\nx" > "$P/site/tr/x/d.md"
+print -- "---\nsource:\n  - eski.md\n  - kaynak.md\nlayout: x\n---\nx" > "$P/site/tr/x/e.md"
+print -- "---\nsource: g/kaynak.md\n---\nx" > "$P/site/tr/x/f.md"
+print -- "- slug: x\n  page: true\n  guide: true" > "$P/site/_data/apps.yml"
+print e > "$P/eski.md"; touch -t 202501010000 "$P/eski.md"
+touch -t 202601010000 "$P/site/tr/x/index.md" "$P/site/tr/x/e.md" "$P/site/tr/x/f.md"
+print k > "$P/kaynak.md"
+# g/kaynak.md: diskte yeni (mtime şimdi) ama git'te temiz ve commit'i 2025 → sayfadan eski sayılmalı
+print g > "$P/g/kaynak.md"
+git -C "$P/g" init -q
+git -C "$P/g" add kaynak.md
+GIT_COMMITTER_DATE="2025-01-01T00:00:00" git -C "$P/g" -c user.name=t -c user.email=t@t commit -qm t --date "2025-01-01T00:00:00"
+if "$P/site/bin/kaynak-kontrol" > "$T/k.txt"; then print "BAŞARISIZ: kaynak-kontrol sorunları geçirdi"; basari=1
 else
-  for bek in "ESKİ       tr/x/index.md" "YOK        tr/x/b.md → yok.md" "SAYFA YOK  en/x/index.md"; do
-    grep -q -- "$bek" "$T/k.txt" || { print "BAŞARISIZ: kaynak-kontrol '$bek' bulmadı"; basari=1; }
-  done
+  bekle kaynak-kontrol "$T/k.txt" "ESKİ       tr/x/index.md" "YOK        tr/x/b.md → yok.md" \
+    "SAYFA YOK  en/x/index.md" "SAYFA YOK  tr/x/kilavuz.md" "SAYFA YOK  en/x/guide.md" \
+    "KAYNAKSIZ  tr/x/c.md" "İSTİSNA    tr/x/d.md" "GÜNCEL     tr/x/e.md ← eski.md" \
+    "ESKİ       tr/x/e.md ← kaynak.md" "GÜNCEL     tr/x/f.md ← g/kaynak.md"
+  temiz_olmali kaynak-kontrol "$T/k.txt" "KAYNAKSIZ  tr/x/d.md"
 fi
 
-(( basari == 0 )) && print "Öz test geçti: iki denetçi de bozuk örnekleri yakaladı."
+(( basari == 0 )) && print "Öz test geçti: iki denetçi de bozuk örnekleri yakaladı, sağlam örnekleri geçirdi."
 exit $basari

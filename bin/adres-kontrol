@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+"""App Store'a girilmiş canlı adresleri denetler: her uygulamanın gizlilik ve destek
+sayfası, App Store bağlantısı ve sitenin ana giriş adresleri. Ağ ister; salt okunur.
+
+Her adres 200 dönmeli ve yönlendirme varsa aynı alan adında kalmalı.
+App Store'un 429 (hız sınırı) yanıtı ve ağ hatası "DOĞRULANAMADI" sayılır, geçti sayılmaz.
+Çıkış kodu: kırık adres 1, doğrulanamayan varsa 2, hepsi tamam 0.
+"""
+import re, sys, urllib.request, urllib.error
+from pathlib import Path
+from urllib.parse import urlparse
+
+SITE = Path(__file__).resolve().parent.parent
+TABAN = "https://recepgur07-bot.github.io"
+adresler = [TABAN + y for y in ("/", "/tr/", "/en/")]
+for m in re.finditer(r"^\s*(appstore|privacy|support):\s*(\S+)", (SITE / "_data/apps.yml").read_text(encoding="utf-8"), re.M):
+    adresler.append(m.group(2))
+
+kirik = belirsiz = 0
+for url in adresler:
+    istek = urllib.request.Request(url, headers={"User-Agent": "adres-kontrol"})
+    try:
+        with urllib.request.urlopen(istek, timeout=20) as y:
+            kod, son = y.status, y.geturl()
+    except urllib.error.HTTPError as h:
+        kod, son = h.code, url
+    except Exception as h:
+        print(f"DOĞRULANAMADI  {url} ({type(h).__name__})"); belirsiz += 1; continue
+    if kod == 429:
+        print(f"DOĞRULANAMADI  {url} (429 hız sınırı)"); belirsiz += 1
+    elif kod != 200 or urlparse(son).netloc != urlparse(url).netloc:
+        print(f"KIRIK          {url} → {kod} {son}"); kirik += 1
+    else:
+        print(f"TAMAM          {url}")
+
+print("-" * 40)
+print(f"{len(adresler)} adres, {kirik} kırık, {belirsiz} doğrulanamadı.")
+sys.exit(1 if kirik else 2 if belirsiz else 0)

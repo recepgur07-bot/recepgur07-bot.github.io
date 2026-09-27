@@ -48,4 +48,5 @@ Ayrıntılı ve bağlayıcı kurallar [AGENTS.md](AGENTS.md) dosyasındadır. K�
 bin/kur        # bir kez: Jekyll'i vendor/gems içine kurar
 bin/onizle     # http://127.0.0.1:4000
 bin/denetle    # göndermeden önce: öz test, derleme, yapı ve kaynak denetimi
+bin/adres-kontrol  # push sonrası: App Store'a girili canlı adresler (ağ ister)
 ```

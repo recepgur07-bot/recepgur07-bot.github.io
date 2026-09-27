@@ -5,10 +5,12 @@
 #
 # page: true  → sitede kendi sayfası var (/tr/<slug>/, /en/<slug>/)
 # page: false → yalnız listede görünür, App Store bağlantısıyla
+# guide: true → iki dilde kılavuz zorunlu (tr/<slug>/kilavuz.md, en/<slug>/guide.md)
 # Yalnız App Store'da YAYINDA olan uygulamalar listelenir.
 
 - slug: memora
   page: true
+  guide: true
   appstore: https://apps.apple.com/app/id6809805472
   privacy: https://recepgur07-bot.github.io/memora/gizlilik-politikasi.html
   support: https://recepgur07-bot.github.io/memora/destek.html

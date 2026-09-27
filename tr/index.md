@@ -1,5 +1,5 @@
 ---
-source: recepgur07-bot.github.io/_data/apps.yml
+kaynaksiz: Uygulama listesi derleme anında _data/apps.yml verisinden üretilir; elle kopya yok, kayma olamaz.
 layout: default
 lang: tr
 title: Uygulamalar

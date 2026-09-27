@@ -2,18 +2,23 @@
 """Derlenmiş sitede (_site) erişilebilirlik iskeletini denetler. Salt okunur.
 
 Her sayfa: tek h1, başlık düzeyi atlamaz, html lang var, "İçeriğe atla" hedefi var,
-iç bağlantılar ve #çapalar gerçek. Çıkış kodu: sorun varsa 1.
+iç bağlantılar ve #çapalar gerçek, dil karşılığı (rel=alternate) var ve geri bağlıyor.
+Kökte yalnız izinli adlar bulunur: eski proje sayfalarının adresleri (/memora/,
+/folio-privacy/, /oneday-privacy …) kökte açılan bir klasör ya da dosyayla ezilmesin.
+Çıkış kodu: sorun varsa 1.
 """
-import re, sys
+import posixpath, re, sys
 from html.parser import HTMLParser
 from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "_site")
+KOK_IZINLI = {"index.html", "404.html", "robots.txt", "sitemap.xml", "favicon.ico", "tr", "en", "assets"}
 
 class Sayfa(HTMLParser):
     def __init__(self):
         super().__init__()
         self.basliklar, self.idler, self.linkler, self.lang = [], set(), [], None
+        self.alternatif = {}
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == "html":
@@ -24,6 +29,18 @@ class Sayfa(HTMLParser):
             self.idler.add(a["id"])
         if tag == "a" and a.get("href"):
             self.linkler.append(a["href"])
+        if tag == "link" and a.get("rel") == "alternate" and a.get("hreflang") and a.get("href"):
+            self.alternatif[a["hreflang"]] = re.sub(r"^[a-z]+://[^/]+", "", a["href"])
+
+def coz(ad, yol):
+    """Bağlantıyı _site içindeki dosya adına çevirir (göreli yollar sayfanın klasörüne göre)."""
+    if not yol.startswith("/"):
+        yol = posixpath.join("/" + posixpath.dirname(ad), yol)
+    son_egik = yol.endswith("/")
+    yol = posixpath.normpath(yol).lstrip("/")
+    if yol in ("", "."):
+        return "index.html"
+    return yol + "/index.html" if son_egik else yol
 
 sayfalar = {}
 for p in SITE.rglob("*.html"):
@@ -32,6 +49,10 @@ for p in SITE.rglob("*.html"):
     sayfalar[p.relative_to(SITE).as_posix()] = s
 
 sorunlu = 0
+kok = sorted(p.name for p in SITE.iterdir() if p.name not in KOK_IZINLI and not p.name.startswith("."))
+if kok:
+    print(f"SORUN  kök: izinsiz ad {kok} — eski proje sayfası adresini ezebilir; içerik tr/ ya da en/ altına")
+    sorunlu += 1
 for ad, s in sorted(sayfalar.items()):
     hatalar = []
     if s.basliklar.count(1) != 1:
@@ -45,11 +66,19 @@ for ad, s in sorted(sayfalar.items()):
         if re.match(r"[a-z]+:", l):
             continue
         yol, _, capa = l.partition("#")
-        hedef = ad if not yol else yol.lstrip("/") + ("index.html" if yol.endswith("/") else "")
+        hedef = ad if not yol else coz(ad, yol)
         if hedef not in sayfalar:
             hatalar.append(f"kırık bağlantı {l}")
         elif capa and capa not in sayfalar[hedef].idler:
             hatalar.append(f"çapa yok {l}")
+    for dil, yol in s.alternatif.items():
+        if dil == s.lang:
+            continue
+        hedef = coz(ad, yol)
+        if hedef not in sayfalar:
+            hatalar.append(f"dil karşılığı yok {yol}")
+        elif coz(hedef, sayfalar[hedef].alternatif.get(s.lang, "/\0")) != ad:
+            hatalar.append(f"dil karşılığı geri bağlamıyor {yol}")
     print(f"{'TAMAM ' if not hatalar else 'SORUN '} {ad}" + ("" if not hatalar else ": " + "; ".join(hatalar)))
     sorunlu += bool(hatalar)
 

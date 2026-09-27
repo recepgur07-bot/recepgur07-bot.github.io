@@ -1,5 +1,7 @@
 ---
-source: pazarlama/uygulamalar/memora/TANITIM-METNI.md
+source:
+  - pazarlama/uygulamalar/memora/TANITIM-METNI.md
+  - memora/Sources/Memora/Resources/Localizable.xcstrings
 layout: default
 lang: tr
 title: Memora kullanım kılavuzu
