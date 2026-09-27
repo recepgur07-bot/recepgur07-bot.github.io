@@ -1,0 +1,84 @@
+# Uygulama kataloğu. Ad ve alt başlıklar fastlane/metadata'dan alınmıştır
+# (her projenin fastlane/metadata/<dil>/name.txt ve subtitle.txt dosyaları).
+# Gizlilik ve destek adresleri App Store'a girilmiş MEVCUT adreslerdir;
+# o eski depolar silinirse App Store bağlantıları kırılır — önce ASC güncellenir.
+#
+# page: true  → sitede kendi sayfası var (/tr/<slug>/, /en/<slug>/)
+# page: false → yalnız listede görünür, App Store bağlantısıyla
+# Yalnız App Store'da YAYINDA olan uygulamalar listelenir.
+
+- slug: memora
+  page: true
+  appstore: https://apps.apple.com/app/id6809805472
+  privacy: https://recepgur07-bot.github.io/memora/gizlilik-politikasi.html
+  support: https://recepgur07-bot.github.io/memora/destek.html
+  tr:
+    name: "Memora: Fotoğraf Galerisi"
+    subtitle: Sade ve erişilebilir galeri
+    audience: VoiceOver kullanıcıları için tasarlandı
+    platforms: iPhone ve iPad
+    requires: iOS 18 veya sonrası
+  en:
+    name: "Memora: Photo Gallery"
+    subtitle: Simple, accessible gallery
+    audience: Designed for VoiceOver users
+    platforms: iPhone and iPad
+    requires: iOS 18 or later
+
+- slug: folio
+  page: true
+  appstore: https://apps.apple.com/app/id6803817370
+  privacy: https://recepgur07-bot.github.io/folio-privacy/
+  support: https://recepgur07-bot.github.io/folio-privacy/support.html
+  tr:
+    name: "Folio: Takip Defterleri"
+    subtitle: İlaç, Fatura, Kitap, Rutin
+    audience: Herkes için; tam VoiceOver desteğiyle
+    platforms: iPhone, iPad ve Mac
+    requires: iOS 17 / macOS 14 veya sonrası
+  en:
+    name: "Folio: Tracking Notebooks"
+    subtitle: Meds, Bills, Books & Habits
+    audience: For everyone, with full VoiceOver support
+    platforms: iPhone, iPad and Mac
+    requires: iOS 17 / macOS 14 or later
+
+- slug: kelimelerim
+  page: false
+  appstore: https://apps.apple.com/app/id6799458502
+  privacy: https://recepgur07-bot.github.io/kelimelerim-legal/
+  support: https://recepgur07-bot.github.io/kelimelerim-legal/destek.html
+  tr:
+    name: "Kelimelerim: Kelime Ezberleme"
+    subtitle: "YDS-YÖKDİL: A1-C2, 6 Oyunla"
+  en:
+    name: "Kelimelerim: Learn Vocabulary"
+    subtitle: 6 Games for English Vocabulary
+
+- slug: tesbihim
+  page: false
+  appstore: https://apps.apple.com/app/id6792310728
+  privacy: https://recepgur07-bot.github.io/oneday-support/tesbihim-privacy
+  support: https://recepgur07-bot.github.io/oneday-support/tesbihim-support
+  tr:
+    name: Tesbihim - Zikirmatik
+    subtitle: Herkes İçin Erişilebilir Zikir
+    platforms: iPhone
+  en:
+    name: Tesbihim - Dhikr Counter
+    subtitle: Turkish UI · VoiceOver Dhikr
+    platforms: iPhone
+
+- slug: framemate
+  page: false
+  appstore: https://apps.apple.com/app/id6762084840
+  privacy: https://recepgur07-bot.github.io/oneday-support/framemate-privacy
+  support: https://recepgur07-bot.github.io/oneday-support/framemate-support
+  tr:
+    name: "FrameMate: Ekran Kaydedici"
+    subtitle: Ekran, Kamera ve Sistem Sesi
+    platforms: Mac
+  en:
+    name: "FrameMate: Screen Recorder"
+    subtitle: Screen, Camera & System Audio
+    platforms: Mac

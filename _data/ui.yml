@@ -1,0 +1,39 @@
+# Arayüzde her sayfada tekrar eden metinler. Yeni dil = yeni anahtar grubu.
+tr:
+  skip: İçeriğe atla
+  site_nav: Site
+  home: Uygulamalar
+  lang_name: Türkçe
+  other_lang_label: English
+  other_lang_hreflang: en
+  back_to_top: Başa dön
+  footer_privacy: Bu site çerez, analitik veya izleme kullanmaz.
+  app_store: App Store'da görüntüle
+  guide: Kullanım kılavuzu
+  privacy: Gizlilik politikası
+  support: Destek
+  platforms: Cihazlar
+  languages: Diller
+  requires: Gereken sistem
+  details: Ayrıntılar
+  contents: Bu sayfada
+  other_apps: Diğer uygulamalar
+en:
+  skip: Skip to content
+  site_nav: Site
+  home: Apps
+  lang_name: English
+  other_lang_label: Türkçe
+  other_lang_hreflang: tr
+  back_to_top: Back to top
+  footer_privacy: This site uses no cookies, analytics or tracking.
+  app_store: View on the App Store
+  guide: User guide
+  privacy: Privacy policy
+  support: Support
+  platforms: Devices
+  languages: Languages
+  requires: Requires
+  details: Details
+  contents: On this page
+  other_apps: Other apps

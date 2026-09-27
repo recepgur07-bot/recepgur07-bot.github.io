@@ -1,0 +1,38 @@
+{%- assign t = site.data.ui[page.lang] -%}
+{%- assign home_url = '/' | append: page.lang | append: '/' -%}
+<!doctype html>
+<html lang="{{ page.lang }}"{% if page.lang == "ar" %} dir="rtl"{% endif %}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  {%- if page.description %}
+  <meta name="description" content="{{ page.description | strip_html | strip_newlines }}">
+  {%- endif %}
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {%- if page.alt_url %}
+  <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="{{ t.other_lang_hreflang }}" href="{{ page.alt_url | absolute_url }}">
+  {%- endif %}
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="#icerik">{{ t.skip }}</a>
+  <header class="site-header">
+    <nav aria-label="{{ t.site_nav }}">
+      <a class="brand" href="{{ home_url | relative_url }}"{% if page.url == home_url %} aria-current="page"{% endif %}>{{ site.title }} — {{ t.home }}</a>
+      {%- if page.alt_url %}
+      <a class="lang" href="{{ page.alt_url | relative_url }}" hreflang="{{ t.other_lang_hreflang }}" lang="{{ t.other_lang_hreflang }}">{{ t.other_lang_label }}</a>
+      {%- endif %}
+    </nav>
+  </header>
+  <main id="icerik" tabindex="-1">
+{{ content }}
+  </main>
+  <footer class="site-footer">
+    <p>{{ t.footer_privacy }}</p>
+    <p>© {{ site.time | date: "%Y" }} Recep Gür</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{%- comment -%}
+Bir uygulamanın bilgi kutusu ve bağlantıları. Kullanım: {% include app-links.html slug="memora" %}
+{%- endcomment -%}
+{%- assign t = site.data.ui[page.lang] -%}
+{%- assign app = site.data.apps | where: "slug", include.slug | first -%}
+{%- assign a = app[page.lang] -%}
+<dl class="facts">
+  {%- if a.platforms %}<div><dt>{{ t.platforms }}</dt><dd>{{ a.platforms }}</dd></div>{% endif %}
+  {%- if a.requires %}<div><dt>{{ t.requires }}</dt><dd>{{ a.requires }}</dd></div>{% endif %}
+  {%- if include.languages %}<div><dt>{{ t.languages }}</dt><dd>{{ include.languages }}</dd></div>{% endif %}
+</dl>
+<ul class="actions">
+  <li><a class="button" href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
+  {%- if include.guide %}
+  <li><a href="{{ include.guide | relative_url }}">{{ t.guide }}</a></li>
+  {%- endif %}
+  <li><a href="{{ app.privacy }}">{{ t.privacy }}</a></li>
+  <li><a href="{{ app.support }}">{{ t.support }}</a></li>
+</ul>

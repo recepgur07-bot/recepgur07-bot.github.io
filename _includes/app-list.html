@@ -1,0 +1,29 @@
+{%- comment -%}
+Ana sayfadaki uygulama listesi. Kendi sayfası olanlar önce, bağlantılı başlıkla gelir.
+{%- endcomment -%}
+{%- assign t = site.data.ui[page.lang] -%}
+{%- assign with_page = site.data.apps | where: "page", true -%}
+{%- assign without_page = site.data.apps | where: "page", false -%}
+<ul class="app-list">
+{%- for app in with_page %}
+  {%- assign a = app[page.lang] %}
+  <li class="app-card">
+    <h3><a href="{{ '/' | append: page.lang | append: '/' | append: app.slug | append: '/' | relative_url }}">{{ a.name }}</a></h3>
+    <p class="subtitle">{{ a.subtitle }}</p>
+    <p>{{ a.audience }}. {{ t.platforms }}: {{ a.platforms }}.</p>
+  </li>
+{%- endfor %}
+</ul>
+{%- if without_page.size > 0 %}
+<h2>{{ t.other_apps }}</h2>
+<ul class="app-list">
+{%- for app in without_page %}
+  {%- assign a = app[page.lang] %}
+  <li class="app-card">
+    <h3>{{ a.name }}</h3>
+    <p class="subtitle">{{ a.subtitle }}{% if a.platforms %} · {{ a.platforms }}{% endif %}</p>
+    <p><a href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></p>
+  </li>
+{%- endfor %}
+</ul>
+{%- endif %}

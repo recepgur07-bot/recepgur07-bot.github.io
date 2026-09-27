@@ -1,0 +1,17 @@
+# GitHub Pages "deploy from branch" ile Jekyll yerleşik olarak derlenir.
+# Bu sitede izleme, analitik, dış yazı tipi ve betik YOKTUR; eklenmez.
+title: Recep Gür
+url: "https://recepgur07-bot.github.io"
+baseurl: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+exclude:
+  - README.md
+  - bin/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

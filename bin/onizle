@@ -1,0 +1,7 @@
+#!/bin/zsh
+# Siteyi yerelde derler ve http://127.0.0.1:4000 adresinde sunar.
+# Jekyll yoksa: GEM_HOME=<klasör> gem install jekyll ; JEKYLL=<klasör>/bin/jekyll bin/onizle
+set -e
+cd "${0:A:h}/.."
+JEKYLL="${JEKYLL:-jekyll}"
+exec "$JEKYLL" serve --host 127.0.0.1 --port 4000 "$@"
