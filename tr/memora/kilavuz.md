@@ -41,7 +41,7 @@ Ekranın en üstünde solda **Ayarlar**, sağda **Ara** ve **Seçimi başlat** d
 
 - **Kapsam:** Tümü, Fotoğraflar, Videolar, Ekran Resimleri, Favoriler ya da albümlerinizden biri. Her birinin yanında kaç öğe olduğu okunur.
 - **Tarihe git:** Bugün, Dün, Son 7 gün, Bu ay, Geçen ay, Belirli bir gün ve Tarih aralığı. Ayrıca Yıllar, Aylar, Günler dizininden yalnızca öğesi olan günlere inebilirsiniz; her adımda kaç öğe olduğu okunur.
-- **Sıralama ve etiketler:** Listeyi En yeni, En eski, Ada göre, En uzun veya En kısa olarak sıralar. Bir etiket seçerseniz yalnızca o etiketteki öğeler gösterilir.
+- **Sıralama ve etiketler:** Listeyi En yeni, En eski veya Ada göre sıralar; Videolar kapsamında En uzun ve En kısa da çıkar. Bir etiket seçerseniz yalnızca o etiketteki öğeler gösterilir.
 
 Metin taraması sürerken bu satırların altında geçici bir "İndeks durumu" satırı (örneğin 1.250 / 4.000) belirir; tarama bitince kaybolur.
 
@@ -76,12 +76,12 @@ Bir öğenin üzerindeyken rotoru Eylemler'e getirip bir parmakla yukarı ya da 
 1. **Paylaş:** Öğeyi sistem paylaşım menüsüne gönderir. Verdiğiniz ad, paylaşılan dosyanın adı olur; alıcı uygulama adı değiştirmediği sürece.
 2. **Adını değiştir:** Öğeye 120 karaktere kadar kendi adınızı verirsiniz. Fotoğraflar'daki asıl dosya adı değişmez. Aynı ad başka bir öğede kullanılıyorsa Memora bunu söyler; önerdiği numaralı adla ya da yine de aynı adla kaydetmeyi seçersiniz.
 3. **Favoriye ekle** ya da **Favoriden çıkar**.
-4. **Fotoğraftaki metin:** Eylem adıyla birlikte "Metin içeriyor" ya da "Taranmadı" okunur. Açılan ekranda Metni oku ile dinleyebilir, Metni kopyala ile panoya alabilir, henüz taranmadıysa Metni incele ile hemen taratabilirsiniz. Videolarda bu eylem görünmez.
+4. **Fotoğraftaki metin:** Eylem adıyla birlikte "Metin içeriyor" ya da "Taranmadı" okunur. Açılan ekranda yazıyı VoiceOver ile doğrudan okursunuz (VoiceOver kapalıysa **Metni oku** düğmesi sesli okur); **Metni kopyala** ile panoya alabilir, henüz taranmadıysa **Metni incele** ile hemen taratabilirsiniz. Videolarda bu eylem görünmez.
 5. **Fotoğraflardan sil:** Silme onayını açar.
 6. **Etiketler:** Var olan etiketlerden seçer ya da yeni etiket oluşturursunuz. Etiket adı 1 ile 40 karakter arasında olabilir; bir öğede en çok 50 etiket bulunur.
 7. **Ayrıntılar:** Çekildiği cihaz, çözünürlük, süre, kaynak dosya adı, konum, kaynak boyutu ve öğenin cihazda mı yoksa yalnız iCloud'da mı durduğu.
 8. **Not ekle** ya da **Notu düzenle:** Öğeyle ilgili kişisel notunuzu yazarsınız.
-9. **Betimle:** Betimleme ekranını açar.
+9. **Betimleme oluştur / Betimlemeyi düzenle:** Betimleme ekranını açar; eylemin adı öğede betimleme olup olmadığını söyler.
 </details>
 
 Bu eylemlerin sırasını **Ayarlar > Erişilebilirlik > Rotor eylemleri** bölümünden değiştirebilir, istemediklerinizi kapatabilirsiniz. Kapattığınız eylemler öğeye basılı tuttuğunuzda açılan menüde kullanılmaya devam eder.
@@ -93,9 +93,9 @@ Bu eylemlerin sırasını **Ayarlar > Erişilebilirlik > Rotor eylemleri** böl�
 Memora'nın betimlemesi, fotoğrafta güvenle tanınan nesneleri ve kişi sayısını söyleyen kısa bir tahmindir. Cihazda üretilir ve yanılabilir. Uzun, cümle cümle bir anlatım için başka bir uygulamadan yararlanabilirsiniz.
 
 - Kayıtlı betimleme yoksa, ekran açıldığında üretim kendiliğinden başlar. Kayıtlı betimleme varsa önce o okunur; yeniden üretim yalnızca sizin isteğinizle başlar.
-- Sonucu beğenirseniz **Betimlemeyi ekle**'ye basarsınız. Var olan betimlemenin yerine koymak için düğmenin adı **Bunu kaydet, eskisinin yerine geçsin** olur. Beğenmezseniz **Yeni öneri** istersiniz.
+- Sonucu beğenirseniz **Betimlemeyi ekle**'ye basarsınız. Var olan betimlemenin yerine koymak için düğmenin adı **Bunu kaydet, eskisinin yerine geçsin** olur. Beğenmezseniz **Yeniden oluştur**'a basarsınız.
 - **Başka bir uygulamayla betimlet:** Fotoğrafı sistem paylaşım menüsüne gönderir; buradan Be My Eyes veya ChatGPT gibi kurulu bir uygulamayı seçebilirsiniz. Fotoğrafı o uygulamaya Memora değil, siz göndermiş olursunuz.
-- **Panodakini yapıştır:** Başka uygulamadan kopyaladığınız betimlemeyi alana yapıştırırsınız. **Elle betimleme yaz** ile kendi açıklamanızı da girebilirsiniz.
+- **Elle betimleme yaz:** Kendi açıklamanızı girersiniz. Panoda kopyalanmış bir metin varsa, örneğin başka bir uygulamadan aldığınız betimleme, alanın altındaki **Panodakini yapıştır** düğmesiyle tek dokunuşta eklersiniz.
 - Eklenen betimlemeler listede duyulur ve aramaya katılır. Videolarda yalnızca kapak karesi betimlenir. Yalnız iCloud'da duran öğeler cihaza indirilmeden betimlenemez.
 
 [Başa dön](#icerik){: .top}
@@ -106,7 +106,7 @@ Ana ekrandaki **Ara** düğmesi arama ekranını açar.
 
 - Verdiğiniz adlarda, etiketlerde, notlarda, fotoğraflardaki yazılarda ve betimlemelerde arar.
 - Arama her zaman arşivin tamamında yapılır; ana ekrandaki kapsam, tarih veya etiket süzgeci aramayı daraltmaz.
-- Sonuçlar liste satırları olarak gelir ve aynı rotor eylemlerini taşır. **Sonuçlardan seç** ile bulduklarınızı topluca seçebilirsiniz.
+- Sonuçlar liste satırları olarak gelir ve aynı rotor eylemlerini taşır. Bir sonuca dokunduğunuzda ayrıntı ekranı açılır.
 - Ekranda metni taranmış öğe sayısı (örneğin 3.200 / 4.000) belirtilir; böylece aramanın ne kadarını kapsadığını bilirsiniz.
 - **Aramayı temizle** düğmesi metni sıfırlar; odak arama kutusunda kalır.
 
@@ -117,7 +117,7 @@ Ana ekrandaki **Ara** düğmesi arama ekranını açar.
 Bir öğeye çift dokunduğunuzda ayrıntı ekranı açılır.
 
 - En üstte "Öğe konumu, 123 öğeden 4." sayacını duyarsınız. Üzerinde bir parmakla yukarı veya aşağı fiske yaparak sonraki ya da önceki öğeye geçersiniz; geçişte yeni öğenin bilgileri de okunur. Aynı işi **Önceki öğe** ve **Sonraki öğe** düğmeleri de yapar.
-- Ekranda Paylaş, favori, Adını değiştir, Etiketler, Not, Betimle, Fotoğraftaki metin, Ayrıntılar ve Sil düğmeleri bulunur.
+- Ekranda Paylaş, favori, Adını değiştir, Etiketler, Not ekle / Notu düzenle, Betimleme oluştur / Betimlemeyi düzenle, Fotoğraftaki metin, Ayrıntılar ve Sil düğmeleri bulunur.
 - Videolarda **Oynat**, **10 saniye geri** ve **10 saniye ileri** denetimleri vardır.
 - Yalnız iCloud'da duran öğelerde **İçeriği indir** düğmesi çıkar; indirilen öğe sonraki turda metin taramasına da girer.
 
@@ -148,17 +148,17 @@ Bir gün başlığına, örneğin "14 Eylül 2026, 11 öğe, Genişletilmiş", g
 Listedeki **Diğer işlemler** bölümünde şu araçlar bulunur:
 
 - **PDF oluştur:** En çok 50 görsel. Sayfa sırasını Yukarı taşı ve Aşağı taşı eylemleriyle düzenlersiniz. PDF'e aranabilir metin katmanı eklenmez.
-- **Fotoğrafları sıkıştır:** En çok 50 fotoğraf. 2560, 1920 veya 1280 piksele kadar küçültülmüş JPEG kopyalar üretir. Orijinaller değişmez; kopyalara konum ve kamera bilgisi eklenmez. Video, Live Photo, RAW, HDR ve hareketli görüntüler sıkıştırılamaz.
+- **Fotoğrafları sıkıştır:** En çok 50 fotoğraf. Küçük, Orta veya Yüksek kalitede JPEG kopyalar üretir. Orijinaller değişmez; kopyalara konum ve kamera bilgisi eklenmez. Video, Live Photo, RAW, HDR ve hareketli görüntüler sıkıştırılamaz.
 - **Seçilenlere ad ver:** Ortak ad verir; "Sırayla numarala" açıksa en eskisinden başlayarak numaralandırır. **Seçilenlerin adını kaldır** ile verilen adları topluca kaldırabilirsiniz.
 - **Etiket ekle:** Seçtiklerinizin hepsine etiket ekler. **Etiketi seçimden kaldır** ile bir etiketi yalnız bu öğelerden kaldırabilirsiniz.
 
-Hazırlanan PDF'i ve kopyaları **Çıktıyı paylaş** ile gönderebilir ya da **Dosyalar'a kaydet** ile saklayabilirsiniz.
+PDF hazırlanınca paylaşım sayfası kendiliğinden açılır; sıkıştırılan kopyalar için **Paylaş** düğmesine basarsınız. Paylaşım sayfasından gönderebilir ya da Dosyalar'a kaydedebilirsiniz.
 
 [Başa dön](#icerik){: .top}
 
 <h2 id="silme">10. Güvenli silme</h2>
 
-Memora'da silme iki onaylıdır. Önce Memora kendi onay penceresini açar; neyin silineceğini ve bunun etiket kaldırma ya da albümden çıkarma olmadığını söyler. Onaylarsanız Apple Fotoğraflar'ın sistem onayı gelir. Silinen öğeler 30 gün boyunca Fotoğraflar uygulamasındaki "Son Silinenler" albümünde bekler.
+Memora'da silme iki onaylıdır. Önce Memora kendi onay penceresini açar; neyin silineceğini ve bunun etiket kaldırma ya da albümden çıkarma olmadığını söyler. Onaylarsanız Apple Fotoğraflar'ın sistem onayı gelir. Silinen öğeler Fotoğraflar uygulamasındaki "Son Silinenler" albümüne gider; ne kadar bekleyecekleri Apple Fotoğraflar'ın kurallarına bağlıdır ve oradan geri alınabilirler.
 
 Silme tamamlandığında VoiceOver odağı ekranın başına kaçmaz; bir sonraki öğeye, o yoksa bir öncekine iner. Vazgeçerseniz odak olduğu yerde kalır.
 
@@ -188,7 +188,7 @@ Silme tamamlandığında VoiceOver odağı ekranın başına kaçmaz; bir sonrak
 - **Metin içeriyor bilgisini söyle** ve **Etiketleri oku:** Listede bu bilgilerin duyulup duyulmayacağı.
 - **Notu listede oku** ve **Betimlemeyi listede oku:** Açıkken metnin kendisi, kapalıyken yalnızca "Not var" ya da "Betimleme var" duyulur.
 - **Video:** Kaydırırken videoları oynat, Sessiz moddayken de ses çıksın, Video bitince başa dön.
-- **Rotor eylemleri:** Eylemleri açıp kapatabilir, "Eylemi yukarı taşı" ve "Eylemi aşağı taşı" ile sıralayabilir, "Eylemleri varsayılana döndür" ile ilk hâline getirebilirsiniz.
+- **Rotor eylemleri:** Eylemleri açıp kapatabilir, **Yukarı taşı** ve **Aşağı taşı** eylemleriyle sıralayabilirsiniz.
 
 ### Arama ve indeksleme
 
@@ -202,7 +202,7 @@ Etiket oluşturur, adını düzeltir ya da arşivden kaldırırsınız. Bir etik
 
 Buradaki veriler fotoğraflarınız değil, Memora'da yazdıklarınız ve tercihlerinizdir.
 
-- **Memora katmanını dışa aktar:** Verdiğiniz adları ve etiketleri tek bir dosyaya aktarır. Fotoğraflar, fotoğraftaki yazılar, notlar, betimlemeler ve ayarlar bu dosyaya girmez.
+- **Memora katmanını dışa aktar:** Verdiğiniz adları, etiketleri ve bunların hangi fotoğrafa ait olduğunu gösteren eşleştirme bilgisini tek bir dosyaya aktarır. Fotoğraflar, fotoğraftaki yazılar, notlar, betimlemeler ve ayarlar bu dosyaya girmez.
 - **Memora dosyası içe aktar:** Yeni cihazda bu dosyayı geri yükler; neyin değişeceğini önce gösterir. Çakışmada "Mevcut veriyi koru" ya da "Dosyadaki değişiklikleri kullan" seçilir. Eşleşmeyen kayıtları "Bağsız kayıtlar" ekranından elle bir fotoğrafa bağlayabilirsiniz.
 - **Yedek:** Adlarınız, etiketleriniz, notlarınız ve betimlemeleriniz cihazın iCloud yedeğine dahildir. Fotoğraflardaki yazılar yedeklenmez; yeni cihazda yeniden taranır.
 - **Tüm Memora verisini sil:** Memora'nın adlarını, etiketlerini, ayarlarını ve indeksini siler. Fotoğraflarınıza, dışa aktardığınız dosyalara ve Apple ödeme geçmişinize dokunmaz.

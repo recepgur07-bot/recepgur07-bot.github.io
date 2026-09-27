@@ -7,7 +7,7 @@ description: Memora, iPhone ve iPad'deki fotoğraf ve videoları VoiceOver ile k
 ---
 # Memora: Fotoğraf Galerisi
 
-Binlerce fotoğraf ve video arasında aradığınızı kolayca bulun, arşivinizi toplu olarak düzenleyin. Memora'da erişilebilirlik sonradan eklenmiş bir yama değil, uygulamanın temelidir: her jestin adlı bir karşılığı, her düğmenin okunan bir adı vardır.
+Binlerce fotoğraf ve video arasında aradığınızı kolayca bulun, arşivinizi toplu olarak düzenleyin. Memora'da erişilebilirlik sonradan eklenmiş bir yama değil, uygulamanın temelidir: kaydırma ve kıstırma gibi jestlerin VoiceOver'da adlı eylem ya da düğme karşılıkları vardır, düğmeler ne yaptıklarını adlarıyla söyler.
 {: .lead}
 
 {% include app-links.html slug="memora" guide="/tr/memora/kilavuz/" languages="Türkçe, İngilizce, Almanca, İspanyolca, Portekizce, Arapça" %}
@@ -38,7 +38,7 @@ Binlerce fotoğraf ve video arasında aradığınızı kolayca bulun, arşiviniz
 - Fotoğraflara kendi adınızı, notunuzu ve etiketlerinizi verin; paylaştığınız dosya bu adla gitsin.
 - Bir günün bütün fotoğraflarını gün başlığından tek hamlede seçin, paylaşın, adlandırın, etiketleyin ya da silin.
 - Seçtiklerinizden çok sayfalı PDF oluşturun ya da küçültülmüş kopyalarını alın.
-- Silme iki onaylıdır; silinenler 30 gün boyunca Fotoğraflar'daki "Son Silinenler" albümünde bekler.
+- Silme iki onaylıdır; silinenler Fotoğraflar'daki "Son Silinenler" albümüne gider ve oradan geri alınabilir.
 
 ### Kendinize göre ayarlamak
 

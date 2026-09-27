@@ -7,7 +7,7 @@ description: Memora is a free gallery app for iPhone and iPad, designed to help 
 ---
 # Memora: Photo Gallery
 
-Find what you are looking for among thousands of photos and videos, and organize your library in bulk. In Memora, accessibility is not a patch added later; it is the foundation. Every gesture has a named equivalent and every button has a spoken name.
+Find what you are looking for among thousands of photos and videos, and organize your library in bulk. In Memora, accessibility is not a patch added later; it is the foundation. Gestures such as swiping and pinching have named VoiceOver actions or button equivalents, and buttons say what they do.
 {: .lead}
 
 {% include app-links.html slug="memora" languages="Turkish, English, German, Spanish, Portuguese, Arabic" %}
@@ -30,7 +30,7 @@ Find what you are looking for among thousands of photos and videos, and organize
 ### Understand
 
 - Hear each item's type, date, orientation, duration, name, tags, note, description and the text in the photo, in one steady order.
-- Have the text in your photos read aloud on device, and copy it.
+- Hear the text in your photos, recognized on your device, and copy it.
 - Add a short on-device image description, or paste a description you got from another app.
 
 ### Organize
@@ -38,7 +38,7 @@ Find what you are looking for among thousands of photos and videos, and organize
 - Give photos your own names, notes and tags; shared files carry the name you gave.
 - Select all photos of a day from its date header in one step, then share, name, tag or delete them.
 - Create a multi-page PDF from your selection, or make smaller copies.
-- Deleting always asks twice; deleted items wait 30 days in the Recently Deleted album in Photos.
+- Deleting always asks twice; deleted items go to the Recently Deleted album in Photos, where you can recover them.
 
 ### Make it yours
 
