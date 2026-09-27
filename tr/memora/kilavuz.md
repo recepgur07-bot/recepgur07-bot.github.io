@@ -3,6 +3,7 @@ layout: default
 lang: tr
 title: Memora kullanım kılavuzu
 permalink: /tr/memora/kilavuz/
+alt_url: /en/memora/guide/
 description: Memora'nın her özelliği, düğme ve ayar adlarıyla adım adım. VoiceOver kullanıcıları için yazılmıştır.
 ---
 <!-- Kaynak: pazarlama/uygulamalar/memora/TANITIM-METNI.md. Metin orada değişirse burası da güncellenir. -->

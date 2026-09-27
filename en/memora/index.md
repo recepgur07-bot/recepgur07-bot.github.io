@@ -10,7 +10,7 @@ description: Memora is a free gallery app for iPhone and iPad, designed to help 
 Find what you are looking for among thousands of photos and videos, and organize your library in bulk. In Memora, accessibility is not a patch added later; it is the foundation. Gestures such as swiping and pinching have named VoiceOver actions or button equivalents, and buttons say what they do.
 {: .lead}
 
-{% include app-links.html slug="memora" languages="Turkish, English, German, Spanish, Portuguese, Arabic" %}
+{% include app-links.html slug="memora" guide="/en/memora/guide/" languages="Turkish, English, German, Spanish, Portuguese, Arabic" %}
 
 ## Privacy and price
 
@@ -46,4 +46,4 @@ Find what you are looking for among thousands of photos and videos, and organize
 - Reorder the rotor actions on items, and turn off the ones you do not need.
 - Export the names and tags you added to a file and bring them to a new device.
 
-The English user guide is on its way. The [Turkish user guide]({{ '/tr/memora/kilavuz/' | relative_url }}){: hreflang="tr"} covers every feature step by step.
+The [user guide]({{ '/en/memora/guide/' | relative_url }}) covers every feature step by step, with the exact button and setting names.

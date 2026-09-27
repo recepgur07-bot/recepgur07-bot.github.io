@@ -51,9 +51,13 @@
   tr:
     name: "Kelimelerim: Kelime Ezberleme"
     subtitle: "YDS-YÖKDİL: A1-C2, 6 Oyunla"
+    platforms: iPhone ve iPad
+    requires: iOS 17 veya sonrası
   en:
     name: "Kelimelerim: Learn Vocabulary"
     subtitle: 6 Games for English Vocabulary
+    platforms: iPhone and iPad
+    requires: iOS 17 or later
 
 - slug: tesbihim
   page: false
@@ -64,10 +68,12 @@
     name: Tesbihim - Zikirmatik
     subtitle: Herkes İçin Erişilebilir Zikir
     platforms: iPhone
+    requires: iOS 17 veya sonrası
   en:
     name: Tesbihim - Dhikr Counter
     subtitle: Turkish UI · VoiceOver Dhikr
     platforms: iPhone
+    requires: iOS 17 or later
 
 - slug: framemate
   page: false
@@ -78,7 +84,25 @@
     name: "FrameMate: Ekran Kaydedici"
     subtitle: Ekran, Kamera ve Sistem Sesi
     platforms: Mac
+    requires: macOS 14 veya sonrası
   en:
     name: "FrameMate: Screen Recorder"
     subtitle: Screen, Camera & System Audio
     platforms: Mac
+    requires: macOS 14 or later
+
+- slug: oneday
+  page: false
+  appstore: https://apps.apple.com/app/id6756538962
+  privacy: https://recepgur07-bot.github.io/oneday-privacy
+  support: https://recepgur07-bot.github.io/oneday-support
+  tr:
+    name: "OneDay: Geri Sayım Widget"
+    subtitle: Sayaç, Hatırlatıcı, Widget
+    platforms: iPhone ve iPad
+    requires: iOS 16 veya sonrası
+  en:
+    name: "OneDay: Countdown & Widget"
+    subtitle: Countdown, Reminders, Widget
+    platforms: iPhone and iPad
+    requires: iOS 16 or later

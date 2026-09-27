@@ -85,13 +85,13 @@ a:hover { text-decoration-thickness: 2px; }
   display: flex;
   flex-wrap: wrap;
   gap: .5rem 1.5rem;
-  justify-content: space-between;
   align-items: center;
   min-height: 3.5rem;
 }
 .site-header a { padding: .5rem 0; }
 .brand { font-weight: 600; color: var(--fg); text-decoration: none; }
 .brand:hover { text-decoration: underline; }
+.site-header .lang { margin-inline-start: auto; }
 
 .lead { font-size: 1.2rem; color: var(--muted); }
 .subtitle { color: var(--muted); margin-top: 0; }

@@ -18,6 +18,8 @@ tr:
   details: Ayrıntılar
   contents: Bu sayfada
   other_apps: Diğer uygulamalar
+  about: Hakkında
+  about_url: /tr/hakkinda/
 en:
   skip: Skip to content
   site_nav: Site
@@ -37,3 +39,5 @@ en:
   details: Details
   contents: On this page
   other_apps: Other apps
+  about: About
+  about_url: /en/about/
