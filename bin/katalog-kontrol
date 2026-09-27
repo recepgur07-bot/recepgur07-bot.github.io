@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Sitedeki uygulama listesini (_data/apps.yml) App Store'da gerçekten yayında olanlarla
+karşılaştırır. Salt okunur; ağ ister.
+
+Aday liste: apple-release-kit/config/PROJECTS.tsv içindeki App ID'li projeler
+(bırakılmış/arşivlenmiş olanlar hariç). Bir uygulamanın yayında olup olmadığı tabloya değil,
+Apple'ın herkese açık arama servisine (itunes.apple.com/lookup) sorulur; tablo "yayında"
+bilgisini tutmaz.
+
+EKSİK: yayında ama sitede yok → apps.yml'e ekle.
+FAZLA: sitede var ama yayında değil → kullanıcıya sor, sonra kaldır.
+Çıkış kodu: fark varsa 1, doğrulanamayan varsa 2, uyumluysa 0.
+Test için: --yayinda <id,id,...> ağ yerine verilen listeyi kullanır; --tsv <yol> tabloyu değiştirir.
+"""
+import argparse, json, re, sys, urllib.request
+from pathlib import Path
+
+SITE = Path(__file__).resolve().parent.parent
+ap = argparse.ArgumentParser()
+ap.add_argument("--tsv", default=str(SITE.parent / "apple-release-kit/config/PROJECTS.tsv"))
+ap.add_argument("--apps", default=str(SITE / "_data/apps.yml"))
+ap.add_argument("--yayinda")
+arg = ap.parse_args()
+
+adaylar = {}
+satirlar = Path(arg.tsv).read_text(encoding="utf-8").splitlines()
+bas = satirlar[0].split("\t")
+for s in satirlar[1:]:
+    r = dict(zip(bas, s.split("\t")))
+    if r.get("app_id", "").strip() and r.get("status") not in ("abandoned", "archive-pending"):
+        adaylar[r["app_id"].strip()] = r["project_name"]
+
+sitede = set(re.findall(r"apps\.apple\.com/app/id(\d+)", Path(arg.apps).read_text(encoding="utf-8")))
+
+def yayinda_mi(app_id):
+    for ulke in ("tr", "us"):
+        url = f"https://itunes.apple.com/lookup?id={app_id}&country={ulke}"
+        with urllib.request.urlopen(url, timeout=20) as y:
+            if json.load(y).get("resultCount", 0) > 0:
+                return True
+    return False
+
+fark = belirsiz = 0
+verilen = set(arg.yayinda.split(",")) if arg.yayinda is not None else None
+for app_id, ad in sorted(adaylar.items(), key=lambda x: x[1]):
+    try:
+        yayin = app_id in verilen if verilen is not None else yayinda_mi(app_id)
+    except Exception as h:
+        print(f"DOĞRULANAMADI  {ad} ({app_id}): {type(h).__name__}"); belirsiz += 1; continue
+    if yayin and app_id not in sitede:
+        print(f"EKSİK          {ad} ({app_id}) yayında ama sitede yok"); fark += 1
+    elif not yayin and app_id in sitede:
+        print(f"FAZLA          {ad} ({app_id}) sitede ama yayında değil"); fark += 1
+    else:
+        print(f"TAMAM          {ad} ({app_id}) {'yayında, sitede' if yayin else 'yayında değil, sitede yok'}")
+for app_id in sorted(sitede - set(adaylar)):
+    print(f"FAZLA          {app_id} sitede ama PROJECTS.tsv'de yok"); fark += 1
+
+print("-" * 40)
+print("Site listesi yayındakilerle uyumlu." if not (fark or belirsiz) else f"{fark} fark, {belirsiz} doğrulanamadı.")
+sys.exit(1 if fark else 2 if belirsiz else 0)

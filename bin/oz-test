@@ -67,5 +67,15 @@ else
   temiz_olmali kaynak-kontrol "$T/k.txt" "KAYNAKSIZ  tr/x/d.md"
 fi
 
-(( basari == 0 )) && print "Öz test geçti: iki denetçi de bozuk örnekleri yakaladı, sağlam örnekleri geçirdi."
+# 3) katalog-kontrol (ağsız: yayındakiler --yayinda ile verilir)
+#    yayında ama sitede yok, sitede ama yayında değil, tabloda olmayan; bırakılmış proje sayılmaz
+print -- "project_name\tapp_id\tstatus\nA\t1\tok\nB\t2\tok\nC\t3\tok\nD\t4\tabandoned" > "$T/p.tsv"
+print -- "- slug: b\n  appstore: https://apps.apple.com/app/id2\n- slug: c\n  appstore: https://apps.apple.com/app/id3\n- slug: z\n  appstore: https://apps.apple.com/app/id9" > "$T/a.yml"
+if bin/katalog-kontrol --tsv "$T/p.tsv" --apps "$T/a.yml" --yayinda 1,2,4 > "$T/c.txt"; then print "BAŞARISIZ: katalog-kontrol farkları geçirdi"; basari=1
+else
+  bekle katalog-kontrol "$T/c.txt" "EKSİK          A (1)" "FAZLA          C (3)" "FAZLA          9 sitede" "TAMAM          B (2)"
+  temiz_olmali katalog-kontrol "$T/c.txt" "D (4)"
+fi
+
+(( basari == 0 )) && print "Öz test geçti: üç denetçi de bozuk örnekleri yakaladı, sağlam örnekleri geçirdi."
 exit $basari

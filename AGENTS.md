@@ -50,6 +50,10 @@ uygulama kodu + fastlane/metadata      (gerçek)
    yalnız `tr/` ve `en/` altındadır.
 4. **Yalnız yayındaki uygulamalar** listelenir. Yeni uygulama yayına girince
    `_data/apps.yml`'e eklenir; bilgi uydurulmaz, doğrulanamayan alan boş bırakılır.
+   `bin/katalog-kontrol` apple-release-kit `PROJECTS.tsv`'deki uygulamaları Apple'ın herkese
+   açık arama servisine sorar ve site listesiyle karşılaştırır (EKSİK / FAZLA). Ağ ister;
+   her push'tan sonra ve her uygulama yayınından sonra koşulur. FAZLA çıkan kayıt
+   kullanıcıya sorulmadan silinmez.
 5. **Erişilebilirlik:** tek `h1`, sıralı başlıklar, doğru `lang`, "İçeriğe atla",
    uzun sayfada içindekiler ve "Başa dön", açılır alan için yalnız yerel `<details>`;
    temel bilgi kapalı alana saklanmaz. Bağlantı metni tek başına anlaşılır olur.
@@ -72,7 +76,7 @@ uygulama kodu + fastlane/metadata      (gerçek)
 | `_includes/` | Uygulama bilgi kutusu, uygulama listesi |
 | `tr/<slug>/index.md`, `en/<slug>/index.md` | Genel bakış |
 | `tr/<slug>/kilavuz.md`, `en/<slug>/guide.md` | Kullanım kılavuzu |
-| `bin/` | `kur`, `onizle`, `denetle`, `yapi-kontrol`, `kaynak-kontrol`, `oz-test`, `adres-kontrol` |
+| `bin/` | `kur`, `onizle`, `denetle`, `yapi-kontrol`, `kaynak-kontrol`, `oz-test`, `adres-kontrol`, `katalog-kontrol` |
 
 ## Uygulama sayfası şablonu (Memora örneği)
 
@@ -81,11 +85,11 @@ uygulama kodu + fastlane/metadata      (gerçek)
 3. `tr/<slug>/index.md`: kısa tanıtım, bilgi kutusu (`app-links.html`), "Neler yapabilirsiniz".
 4. `tr/<slug>/kilavuz.md` (`guide: true`): içindekiler, numaralı `h2` bölümler, uzun listeler `<details>` içinde.
 5. İngilizce karşılıklar, `alt_url` ile birbirine bağlı; her sayfada `source:`.
-6. `bin/denetle` → kullanıcı onayı → push → `bin/adres-kontrol`.
+6. `bin/denetle` → kullanıcı onayı → push → `bin/adres-kontrol` ve `bin/katalog-kontrol`.
 
 ## Rutin bakım
 
 - Bir uygulamanın yeni sürümü yayımlanınca: özellik değiştiyse önce `TANITIM-METNI.md`,
   sonra buradaki sayfalar; `bin/kaynak-kontrol` temiz çıkana kadar.
-- Yeni uygulama yayına girince: `apps.yml` kaydı (apple-release-kit'ten).
+- Yeni uygulama yayına girince: `bin/katalog-kontrol` EKSİK der; `apps.yml` kaydı apple-release-kit'ten doldurulur.
 - Bir uygulama kaldırılırsa: kaydı silmeden önce kullanıcıya sorulur.
