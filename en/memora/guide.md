@@ -1,4 +1,5 @@
 ---
+source: recepgur07-bot.github.io/tr/memora/kilavuz.md
 layout: default
 lang: en
 title: Memora user guide

@@ -18,6 +18,8 @@ GitHub Pages "deploy from branch" (main, kök) ile Jekyll yerleşik olarak derle
 
 ## Kurallar
 
+Ayrıntılı ve bağlayıcı kurallar [AGENTS.md](AGENTS.md) dosyasındadır. Kısaca:
+
 - **Mevcut adresler bozulmaz.** Gizlilik ve destek sayfaları eski depolarda durur
   (`memora`, `folio-privacy`, `oneday-support`, `kelimelerim-legal`, ...) ve App Store'a
   bu adreslerle girilmiştir. Bu sitede kök düzeyde bu adlarla klasör açılmaz;
@@ -35,10 +37,15 @@ GitHub Pages "deploy from branch" (main, kök) ile Jekyll yerleşik olarak derle
 
 1. `_data/apps.yml` içine kayıt ekle (`page: false` ile yalnız listede görünür).
 2. Kendi sayfası olacaksa `page: true` yap; `tr/<slug>/index.md` ve `en/<slug>/index.md`
-   oluştur, ön bilgide `alt_url` ile birbirine bağla.
+   oluştur, ön bilgide `alt_url` ile birbirine bağla ve `source:` alanına kaynak metnin
+   yolunu yaz (`projelerim/`e göre). `bin/kaynak-kontrol` kaynak sayfadan yeniyse uyarır.
 
-## Önizleme
+`tr/hakkinda/` ve `en/about/` bilinçli olarak boş ve `noindex`'tir; içeriği kullanıcı karar verince yazılır.
+
+## Önizleme ve denetim
 
 ```bash
-bin/onizle
+bin/kur        # bir kez: Jekyll'i vendor/gems içine kurar
+bin/onizle     # http://127.0.0.1:4000
+bin/denetle    # göndermeden önce: öz test, derleme, yapı ve kaynak denetimi
 ```

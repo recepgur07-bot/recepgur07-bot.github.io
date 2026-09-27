@@ -1,0 +1,14 @@
+#!/bin/zsh
+# Göndermeden (git push) önce koşulur: öz test → derle → yapı denetimi → kaynak denetimi.
+# Dış bağlantıları denetlemez; onlar için pazarlama/bin/link-kontrol kullanılır.
+set -e
+cd "${0:A:h}/.."
+[[ -x vendor/gems/bin/jekyll ]] || { print -u2 "Jekyll kurulu değil: önce bin/kur"; exit 1; }
+print "== Denetçi öz testi"
+bin/oz-test
+print "== Derleme"
+GEM_HOME=$PWD/vendor/gems vendor/gems/bin/jekyll build --quiet
+print "== Yapı"
+bin/yapi-kontrol _site
+print "== Kaynak"
+bin/kaynak-kontrol

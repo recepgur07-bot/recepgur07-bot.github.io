@@ -11,6 +11,8 @@ kramdown:
   smart_quotes: ["apos", "apos", "quot", "quot"]
 exclude:
   - README.md
+  - AGENTS.md
+  - CLAUDE.md
   - bin/
   - Gemfile
   - Gemfile.lock

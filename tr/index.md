@@ -1,4 +1,5 @@
 ---
+source: recepgur07-bot.github.io/_data/apps.yml
 layout: default
 lang: tr
 title: Uygulamalar

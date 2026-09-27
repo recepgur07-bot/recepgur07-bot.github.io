@@ -1,4 +1,5 @@
 ---
+source: folio/fastlane/metadata/en-US/description.txt
 layout: default
 lang: en
 title: "Folio: Tracking Notebooks"

@@ -1,0 +1,35 @@
+#!/bin/zsh
+# Denetçilerin öz testi: bilerek bozulmuş örneklerde sorunu YAKALADIKLARINI kanıtlar.
+# "0 sorun" çıktısı ancak bu test geçiyorsa anlamlıdır.
+set -e
+cd "${0:A:h}/.."
+T=$(mktemp -d); trap 'rm -rf "$T"' EXIT
+basari=0
+
+# 1) yapi-kontrol: iki h1, başlık atlaması, kırık bağlantı, olmayan çapa, lang yok
+mkdir -p "$T/site/a"
+print '<html lang="tr"><body><h1>x</h1><h1>y</h1><h4>z</h4><a href="/yok/">k</a><a href="#bos">c</a></body></html>' > "$T/site/index.html"
+print '<html><body><h1>x</h1></body></html>' > "$T/site/a/index.html"
+if bin/yapi-kontrol "$T/site" > "$T/y.txt"; then print "BAŞARISIZ: yapi-kontrol bozuk siteyi geçirdi"; basari=1
+else
+  for bek in "h1 sayısı 2" "başlık atlaması" "kırık bağlantı /yok/" "çapa yok #bos" "lang yok"; do
+    grep -q -- "$bek" "$T/y.txt" || { print "BAŞARISIZ: yapi-kontrol '$bek' bulmadı"; basari=1; }
+  done
+fi
+
+# 2) kaynak-kontrol: kaynaktan eski sayfa, olmayan kaynak, eksik uygulama sayfası
+mkdir -p "$T/p/site/bin" "$T/p/site/tr/x" "$T/p/site/_data"
+cp bin/kaynak-kontrol "$T/p/site/bin/"
+print -- "---\nsource: kaynak.md\n---\nx" > "$T/p/site/tr/x/index.md"
+print -- "---\nsource:\n  - yok.md\n---\nx" > "$T/p/site/tr/x/b.md"
+print -- "- slug: x\n  page: true" > "$T/p/site/_data/apps.yml"
+touch -t 202601010000 "$T/p/site/tr/x/index.md"; print k > "$T/p/kaynak.md"
+if "$T/p/site/bin/kaynak-kontrol" > "$T/k.txt"; then print "BAŞARISIZ: kaynak-kontrol sorunları geçirdi"; basari=1
+else
+  for bek in "ESKİ       tr/x/index.md" "YOK        tr/x/b.md → yok.md" "SAYFA YOK  en/x/index.md"; do
+    grep -q -- "$bek" "$T/k.txt" || { print "BAŞARISIZ: kaynak-kontrol '$bek' bulmadı"; basari=1; }
+  done
+fi
+
+(( basari == 0 )) && print "Öz test geçti: iki denetçi de bozuk örnekleri yakaladı."
+exit $basari

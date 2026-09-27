@@ -1,4 +1,5 @@
 ---
+source: recepgur07-bot.github.io/tr/memora/index.md
 layout: default
 lang: en
 title: "Memora: Photo Gallery"

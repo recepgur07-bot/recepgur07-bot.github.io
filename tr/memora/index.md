@@ -1,4 +1,5 @@
 ---
+source: pazarlama/uygulamalar/memora/TANITIM-METNI.md
 layout: default
 lang: tr
 title: "Memora: Fotoğraf Galerisi"

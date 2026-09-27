@@ -1,0 +1,82 @@
+#!/usr/bin/env python3
+"""Site sayfalarının kaynaklarından geri kalıp kalmadığını bildirir. Salt okunur.
+
+Her sayfa ön bilgisinde `source:` ile kaynağını yazar (tek yol ya da liste;
+yollar `projelerim/` klasörüne görelidir). Kaynağın son değişikliği sayfanınkinden
+yeniyse sayfa ESKİ sayılır. Zaman: dosya git'te temizse son commit, değilse
+diskteki değişiklik zamanı.
+
+Ayrıca `_data/apps.yml` içinde `page: true` olan her uygulamanın iki dilde
+sayfası olduğunu denetler. Çıkış kodu: sorun varsa 1.
+"""
+import os, re, subprocess, sys
+from pathlib import Path
+
+SITE = Path(__file__).resolve().parent.parent
+ROOT = SITE.parent  # projelerim/
+
+def degisim(p: Path) -> float:
+    d = p.parent
+    try:
+        kirli = subprocess.run(["git", "-C", d, "status", "--porcelain", "--", p.name],
+                               capture_output=True, text=True, check=True).stdout.strip()
+        if not kirli:
+            ts = subprocess.run(["git", "-C", d, "log", "-1", "--format=%ct", "--", p.name],
+                                capture_output=True, text=True, check=True).stdout.strip()
+            if ts:
+                return float(ts)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass
+    return p.stat().st_mtime
+
+def on_bilgi(p: Path) -> str:
+    m = re.match(r"---\n(.*?)\n---", p.read_text(encoding="utf-8"), re.S)
+    return m.group(1) if m else ""
+
+def kaynaklar(fm: str) -> list[str]:
+    m = re.search(r"^source:[ \t]*(.*)$", fm, re.M)
+    if not m:
+        return []
+    if m.group(1).strip():
+        return [m.group(1).strip().strip("\"'")]
+    alt = fm[m.end():].split("\n")[1:]
+    return [l.strip()[2:].strip().strip("\"'") for l in _liste(alt)]
+
+def _liste(satirlar):
+    for l in satirlar:
+        if l.strip().startswith("- "):
+            yield l
+        elif l.strip():
+            break
+
+sorun = 0
+for sayfa in sorted(list(SITE.glob("tr/**/*.md")) + list(SITE.glob("en/**/*.md"))):
+    ad = sayfa.relative_to(SITE)
+    ks = kaynaklar(on_bilgi(sayfa))
+    if not ks:
+        print(f"KAYNAKSIZ  {ad}")
+        continue
+    t = degisim(sayfa)
+    for k in ks:
+        kp = ROOT / k
+        if not kp.exists():
+            print(f"YOK        {ad} → {k}")
+            sorun += 1
+        elif degisim(kp) > t:
+            print(f"ESKİ       {ad} ← {k} daha yeni")
+            sorun += 1
+        else:
+            print(f"GÜNCEL     {ad} ← {k}")
+
+apps = (SITE / "_data/apps.yml").read_text(encoding="utf-8")
+for blok in re.split(r"\n- slug: ", "\n" + apps)[1:]:
+    slug = blok.split("\n", 1)[0].strip()
+    if re.search(r"^\s*page: true", blok, re.M):
+        for dil in ("tr", "en"):
+            if not (SITE / dil / slug / "index.md").exists():
+                print(f"SAYFA YOK  {dil}/{slug}/index.md (apps.yml page: true)")
+                sorun += 1
+
+print("-" * 40)
+print("Sorun yok." if not sorun else f"{sorun} sorun. ESKİ sayfayı kaynağına göre güncelle; kaynağı sayfaya göre değiştirme.")
+sys.exit(1 if sorun else 0)

@@ -1,4 +1,5 @@
 ---
+source: folio/fastlane/metadata/tr/description.txt
 layout: default
 lang: tr
 title: "Folio: Takip Defterleri"

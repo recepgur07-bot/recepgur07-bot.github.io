@@ -1,0 +1,6 @@
+#!/bin/zsh
+# Jekyll'i yalnız bu depo için vendor/gems içine kurar (rubygems.org'dan indirir).
+# GitHub Pages sunucuda kendi Jekyll'ini kullanır; bu yalnız yerel önizleme/denetim içindir.
+set -e
+cd "${0:A:h}/.."
+GEM_HOME=$PWD/vendor/gems gem install jekyll --no-document

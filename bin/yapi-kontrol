@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Derlenmiş sitede (_site) erişilebilirlik iskeletini denetler. Salt okunur.
+
+Her sayfa: tek h1, başlık düzeyi atlamaz, html lang var, "İçeriğe atla" hedefi var,
+iç bağlantılar ve #çapalar gerçek. Çıkış kodu: sorun varsa 1.
+"""
+import re, sys
+from html.parser import HTMLParser
+from pathlib import Path
+
+SITE = Path(sys.argv[1] if len(sys.argv) > 1 else Path(__file__).resolve().parent.parent / "_site")
+
+class Sayfa(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.basliklar, self.idler, self.linkler, self.lang = [], set(), [], None
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == "html":
+            self.lang = a.get("lang")
+        if re.fullmatch(r"h[1-6]", tag):
+            self.basliklar.append(int(tag[1]))
+        if "id" in a:
+            self.idler.add(a["id"])
+        if tag == "a" and a.get("href"):
+            self.linkler.append(a["href"])
+
+sayfalar = {}
+for p in SITE.rglob("*.html"):
+    s = Sayfa()
+    s.feed(p.read_text(encoding="utf-8"))
+    sayfalar[p.relative_to(SITE).as_posix()] = s
+
+sorunlu = 0
+for ad, s in sorted(sayfalar.items()):
+    hatalar = []
+    if s.basliklar.count(1) != 1:
+        hatalar.append(f"h1 sayısı {s.basliklar.count(1)}")
+    atlama = [(a, b) for a, b in zip(s.basliklar, s.basliklar[1:]) if b > a + 1]
+    if atlama:
+        hatalar.append(f"başlık atlaması {atlama}")
+    if not s.lang:
+        hatalar.append("lang yok")
+    for l in s.linkler:
+        if re.match(r"[a-z]+:", l):
+            continue
+        yol, _, capa = l.partition("#")
+        hedef = ad if not yol else yol.lstrip("/") + ("index.html" if yol.endswith("/") else "")
+        if hedef not in sayfalar:
+            hatalar.append(f"kırık bağlantı {l}")
+        elif capa and capa not in sayfalar[hedef].idler:
+            hatalar.append(f"çapa yok {l}")
+    print(f"{'TAMAM ' if not hatalar else 'SORUN '} {ad}" + ("" if not hatalar else ": " + "; ".join(hatalar)))
+    sorunlu += bool(hatalar)
+
+print("-" * 40)
+print(f"{len(sayfalar)} sayfa, {sorunlu} sorunlu.")
+sys.exit(1 if sorunlu or not sayfalar else 0)
