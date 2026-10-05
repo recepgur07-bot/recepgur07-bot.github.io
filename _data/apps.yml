@@ -78,7 +78,8 @@
     requires: iOS 17 or later
 
 - slug: framemate
-  page: false
+  page: true
+  guide: true
   appstore: https://apps.apple.com/app/id6762084840
   privacy: https://recepgur07-bot.github.io/oneday-support/framemate-privacy
   support: https://recepgur07-bot.github.io/oneday-support/framemate-support
