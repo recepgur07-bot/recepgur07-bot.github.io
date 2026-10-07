@@ -8,12 +8,24 @@ description: Forali’s purpose, accessibility approach, and goals for artificia
 ---
 # About
 
-Forali is an independent developer brand building accessible, useful apps for Apple platforms.
+Forali is a software brand founded by Recep Gür, developing apps for iPhone, iPad, and Mac. Our aim is to make technology more usable for more people, across everyday life, learning, and entertainment.
 
-Our aim is to make the possibilities of technology more accessible to everyone. By considering the needs of blind and low-vision users from the start of design, we aim to create simple, clear experiences that everyone can use comfortably.
+We consider accessibility from the start of design. We aim to reduce barriers for blind and low-vision users while creating simple, clear experiences for everyone.
 
-We are exploring how artificial intelligence can support this goal. We aim to use it to support development, reduce barriers to use, and make everyday tasks easier. We value evaluating each solution against real needs, user feedback, and accessibility testing.
+## What are we building today?
 
-Forali brings together our apps, user guides, and support resources. Users’ experiences and suggestions help guide the development of the apps.
+Our existing work includes photo gallery access with [Memora](/en/memora/), vocabulary learning with Kelimelerim, everyday tracking with [Folio](/en/folio/), and screen recording with [FrameMate](/en/framemate/). Our [Apps](/en/) page brings together our apps, App Store links, and support resources.
+
+Forali is the shared brand for apps developed by Recep Gür. You may therefore see Recep Gür listed as the developer on the App Store.
+
+## What comes next?
+
+We aim to maintain and improve our existing apps and create new accessible apps, games, and web experiences. One of our goals is to demonstrate, through practical examples, how simple, thoughtful adaptations can make content that is difficult to access more usable.
+
+## The role of artificial intelligence
+
+We use AI to support development. In future work, we plan to explore and evaluate prototype AI features that could help people access content and complete everyday tasks. These are development goals; the features available in each existing app are described on its own app page.
+
+User feedback and accessibility testing guide our approach. Our [Accessibility](/en/accessibility/) page explains the approach and known limitations, and [Support and contact](/en/contact/) explains how to reach us.
 
 **Accessible by design. Useful for everyone.**

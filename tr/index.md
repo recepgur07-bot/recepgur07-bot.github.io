@@ -1,17 +1,21 @@
 ---
-kaynaksiz: Uygulama listesi derleme anında _data/apps.yml verisinden üretilir; elle kopya yok, kayma olamaz.
+source: forali/docs/AMAC-VE-YOL.md
 layout: default
 lang: tr
 title: Uygulamalar
 alt_url: /en/
-description: Forali — bağımsız geliştirici Recep Gür'ün iPhone, iPad ve Mac uygulamaları. Erişilebilirlik temelde.
+description: Forali — iPhone, iPad ve Mac uygulamaları. Mevcut ürünlerimiz, erişilebilirlik yaklaşımımız ve gelecek hedeflerimiz.
 ---
 # Forali
 
 Tasarımdan itibaren erişilebilir. Herkes için kullanışlı.
 {: .lead}
 
-Bağımsız geliştirici Recep Gür'ün iPhone, iPad ve Mac uygulamaları. Bazı uygulamaların ayrıntılı tanıtım sayfası ve kullanım kılavuzu var; diğerleri listede App Store bağlantısıyla yer alıyor. Bütün uygulamaların destek ve gizlilik bağlantıları [Destek ve iletişim](/tr/iletisim/) sayfasında toplu durur. Erişilebilirlik yaklaşımı [Erişilebilirlik](/tr/erisilebilirlik/) sayfasında.
+Forali, iPhone, iPad ve Mac için uygulamalar geliştiren, Recep Gür tarafından kurulan bir yazılım markasıdır. Amacımız, günlük yaşamdan öğrenmeye ve eğlenceye kadar teknolojinin sunduğu olanakları daha fazla insan için kullanılabilir hâle getirmek.
+
+Erişilebilirliği tasarımın başlangıcından itibaren ele alıyoruz. Görme engelli ve az gören kullanıcıların karşılaştığı engelleri azaltırken, herkes için sade ve anlaşılır deneyimler geliştirmeyi hedefliyoruz.
+
+[Amacımız ve gelecek planlarımız](/tr/hakkinda/) · [Erişilebilirlik yaklaşımımız](/tr/erisilebilirlik/) · [Destek ve iletişim](/tr/iletisim/)
 
 ## Uygulamalar
 
