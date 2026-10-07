@@ -4,12 +4,16 @@ layout: default
 lang: en
 title: About
 alt_url: /tr/hakkinda/
-description: Forali is the name of independent developer Recep Gür's app work.
+description: Forali’s purpose, accessibility approach, and goals for artificial intelligence.
 ---
 # About
 
-Forali is the name I use for my independent app development work. It is a one-person developer brand, not a company.
+Forali is an independent developer brand building accessible, useful apps for Apple platforms.
 
-I build apps for Apple platforms with accessibility considered from the start. My aim is to make simple, useful tools that everyone, including blind and low-vision users, can use comfortably.
+Our aim is to make the possibilities of technology more accessible to everyone. By considering the needs of blind and low-vision users from the start of design, we aim to create simple, clear experiences that everyone can use comfortably.
 
-The app list is on the [home page](/en/), the accessibility approach is on the [Accessibility](/en/accessibility/) page, and ways to get help are on [Support and contact](/en/contact/).
+We are exploring how artificial intelligence can support this goal. We aim to use it to support development, reduce barriers to use, and make everyday tasks easier. We value evaluating each solution against real needs, user feedback, and accessibility testing.
+
+Forali brings together our apps, user guides, and support resources. Users’ experiences and suggestions help guide the development of the apps.
+
+**Accessible by design. Useful for everyone.**

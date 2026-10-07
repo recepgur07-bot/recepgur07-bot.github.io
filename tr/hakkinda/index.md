@@ -4,12 +4,16 @@ layout: default
 lang: tr
 title: Hakkında
 alt_url: /en/about/
-description: Forali, bağımsız geliştirici Recep Gür'ün uygulama çalışmalarının adıdır.
+description: Forali’nin amacı, erişilebilirlik yaklaşımı ve yapay zekâ hedefleri.
 ---
 # Hakkında
 
-Forali, bağımsız geliştirici Recep Gür'ün uygulama çalışmalarına verdiği addır. Bir şirket değil, tek kişilik bir geliştirici markasıdır.
+Forali, Apple platformları için erişilebilir ve kullanışlı uygulamalar geliştiren bağımsız bir geliştirici markasıdır.
 
-Apple platformları için uygulamalar geliştiriyorum ve erişilebilirliği işin başından düşünüyorum. Hedefim, görme engelli kullanıcılar dahil herkesin rahatça kullanabileceği sade ve işe yarar araçlar yapmak.
+Amacımız, teknolojinin sunduğu olanakları herkes için daha ulaşılabilir hâle getirmek. Görme engelli ve az gören kullanıcıların ihtiyaçlarını tasarımın başlangıcından itibaren düşünürken, herkesin rahatça kullanabileceği sade ve anlaşılır deneyimler oluşturmayı hedefliyoruz.
 
-Uygulamaların listesi [ana sayfada](/tr/), erişilebilirlik yaklaşımı [Erişilebilirlik](/tr/erisilebilirlik/) sayfasında, yardım yolları [Destek ve iletişim](/tr/iletisim/) sayfasında.
+Yapay zekânın bu amaç için sunduğu imkânları araştırıyoruz. Geliştirme sürecini desteklemek, kullanımın önündeki engelleri azaltmak ve günlük işleri kolaylaştırmak için bu teknolojiden yararlanmayı amaçlıyoruz. Her çözümü gerçek ihtiyaçlar, kullanıcı geri bildirimleri ve erişilebilirlik testleriyle değerlendirmeye önem veriyoruz.
+
+Forali çatısı altında uygulamalarımızı, kullanım kılavuzlarını ve destek kaynaklarını bir araya getiriyoruz. Kullanıcıların deneyimleri ve önerileri, uygulamaların gelişmesine yön veriyor.
+
+**Accessible by design. Useful for everyone.**
