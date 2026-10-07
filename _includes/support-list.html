@@ -1,0 +1,17 @@
+{%- comment -%}
+Destek ve iletişim sayfasındaki uygulama başına destek listesi; _data/apps.yml'den üretilir.
+{%- endcomment -%}
+{%- assign t = site.data.ui[page.lang] -%}
+<ul class="app-list">
+{%- for app in site.data.apps %}
+  {%- assign a = app[page.lang] %}
+  <li class="app-card">
+    <h3>{{ a.name }}</h3>
+    <ul class="actions">
+      <li><a href="{{ app.support }}">{{ t.support }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
+      <li><a href="{{ app.privacy }}">{{ t.privacy }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
+      <li><a href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
+    </ul>
+  </li>
+{%- endfor %}
+</ul>

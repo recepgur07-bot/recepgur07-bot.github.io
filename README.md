@@ -40,7 +40,7 @@ Ayrıntılı ve bağlayıcı kurallar [AGENTS.md](AGENTS.md) dosyasındadır. K�
    oluştur, ön bilgide `alt_url` ile birbirine bağla ve `source:` alanına kaynak metnin
    yolunu yaz (`projelerim/`e göre). `bin/kaynak-kontrol` kaynak sayfadan yeniyse uyarır.
 
-`tr/hakkinda/` ve `en/about/` bilinçli olarak boş ve `noindex`'tir; içeriği kullanıcı karar verince yazılır.
+`tr/hakkinda/` ve `en/about/` yalnız Forali markasını anlatır; kişisel bilgi eklenmez.
 
 ## Önizleme ve denetim
 

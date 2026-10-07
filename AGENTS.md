@@ -6,7 +6,7 @@ Bu dosya Claude Code, Codex, Cursor, Antigravity ve buraya girecek her araç iç
 ## Bu depo nedir
 
 Recep Gür'ün App Store uygulamalarının tanıtım ve kullanım kılavuzu sitesi.
-Yayın adresi: https://recepgur07-bot.github.io/ (GitHub Pages, `main` dalı, kök klasör).
+Yayın adresi: https://forali.app/ (GitHub Pages, `main` dalı, kök klasör; `CNAME` dosyası). Eski `recepgur07-bot.github.io` adresleri ve aynı hesaptaki proje siteleri (`/memora/`, `/folio-privacy/` …) bu alan adına yönlenir.
 `main`'e gönderilen her commit bir iki dakikada **herkese açık** yayına girer.
 
 ## Bilgi zinciri
@@ -63,7 +63,7 @@ uygulama kodu + fastlane/metadata      (gerçek)
    "her şey erişilebilir" türü mutlak cümle kurulmaz.
 7. **İzleme yok:** çerez, analitik, dış yazı tipi veya dış betik eklenmez.
 8. **Kişisel bilgi** (geliştiricinin sağlığı, kimliği vb.) kullanıcının açık onayı olmadan yazılmaz.
-   `tr/hakkinda/` ve `en/about/` bu yüzden boş ve `noindex`'tir.
+   `tr/hakkinda/` ve `en/about/` yalnız Forali markasını anlatır; kişisel bilgi içermez.
 9. **Sır yok.** Token, anahtar, parola bu depoya girmez.
 
 ## Yapı

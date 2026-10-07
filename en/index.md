@@ -4,13 +4,15 @@ layout: default
 lang: en
 title: Apps
 alt_url: /tr/
-description: iPhone, iPad and Mac apps by Recep Gür. For everyone, with accessibility at the core.
+description: Forali — iPhone, iPad and Mac apps by independent developer Recep Gür. Accessibility at the core.
 ---
-# Apps
+# Forali
 
-Apps for everyone, with accessibility at the core.
+Accessible by design. Useful for everyone.
 {: .lead}
 
-## Featured
+iPhone, iPad and Mac apps by independent developer Recep Gür. Some apps have a detailed page and a user guide; the others are listed with their App Store link. Support and privacy links for every app are collected on the [Support and contact](/en/contact/) page. The [Accessibility](/en/accessibility/) page explains the approach.
+
+## Apps
 
 {% include app-list.html %}

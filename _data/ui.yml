@@ -20,6 +20,12 @@ tr:
   other_apps: Diğer uygulamalar
   about: Hakkında
   about_url: /tr/hakkinda/
+  accessibility: Erişilebilirlik
+  accessibility_url: /tr/erisilebilirlik/
+  contact: Destek ve iletişim
+  contact_url: /tr/iletisim/
+  slogan: Tasarımdan itibaren erişilebilir. Herkes için kullanışlı.
+  footer_owner: Forali · Bağımsız geliştirici Recep Gür'ün uygulamaları
 en:
   skip: Skip to content
   site_nav: Site
@@ -41,3 +47,9 @@ en:
   other_apps: Other apps
   about: About
   about_url: /en/about/
+  accessibility: Accessibility
+  accessibility_url: /en/accessibility/
+  contact: Support and contact
+  contact_url: /en/contact/
+  slogan: Accessible by design. Useful for everyone.
+  footer_owner: Forali · Independent apps by Recep Gür
