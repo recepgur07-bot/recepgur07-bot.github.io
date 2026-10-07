@@ -1,15 +1,10 @@
 ---
 layout: default
-lang: tr
-title: Uygulamalar / Apps
-description: Forali — bağımsız geliştirici Recep Gür'ün iPhone, iPad ve Mac uygulamaları. Erişilebilirlik temelde.
+lang: en
+title: Apps
+alt_url: /tr/
+source: forali/docs/AMAC-VE-YOL.md
+description: Forali — apps for iPhone, iPad, and Mac. Our products, accessibility approach, and plans.
 ---
-<h1>Forali</h1>
-<p class="lead">Tasarımdan itibaren erişilebilir. Herkes için kullanışlı.</p>
-<p lang="en" class="lead">Accessible by design. Useful for everyone.</p>
-<ul class="actions">
-  <li><a class="button" href="{{ '/tr/' | relative_url }}" hreflang="tr">Türkçe devam et</a></li>
-  <li lang="en"><a class="button" href="{{ '/en/' | relative_url }}" hreflang="en">Continue in English</a></li>
-</ul>
-<p>Bağımsız geliştirici Recep Gür'ün iPhone, iPad ve Mac uygulamaları.</p>
-<p lang="en">iPhone, iPad and Mac apps by independent developer Recep Gür.</p>
+{% capture home_content %}{% include home-en.md %}{% endcapture %}
+{{ home_content | markdownify }}

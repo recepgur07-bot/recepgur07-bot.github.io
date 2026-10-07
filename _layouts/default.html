@@ -22,7 +22,6 @@
 </head>
 <body>
   <a class="skip" href="#icerik">{{ t.skip }}</a>
-  {%- unless page.url == "/" %}
   <header class="site-header">
     <nav aria-label="{{ t.site_nav }}">
       <a class="brand" href="{{ home_url | relative_url }}"{% if page.url == home_url %} aria-current="page"{% endif %}>{{ site.title }} — {{ t.home }}</a>
@@ -34,7 +33,6 @@
       {%- endif %}
     </nav>
   </header>
-  {%- endunless %}
   <main id="icerik" tabindex="-1">
 {{ content }}
   </main>
