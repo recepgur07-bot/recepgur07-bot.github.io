@@ -21,9 +21,11 @@ temiz_olmali() {  # temiz_olmali <denetçi-adı> <çıktı-dosyası> <olmaması-
 
 # 1) yapi-kontrol
 #    iki h1, başlık atlaması, kırık bağlantı, olmayan çapa, lang yok, kökte izinsiz ad,
-#    geri bağlamayan dil karşılığı, var olmayan dil karşılığı; göreli bağlantı doğru çözülür
+#    geri bağlamayan dil karşılığı, var olmayan dil karşılığı, alt'sız ve dosyası olmayan görsel;
+#    göreli bağlantı doğru çözülür, alt="" süs görseli sorun sayılmaz
 S="$T/site"; mkdir -p "$S/tr/a" "$S/en/a" "$S/tr/b" "$S/memora"
-print '<html lang="tr"><body><h1>x</h1><h1>y</h1><h4>z</h4><a href="/yok/">k</a><a href="#bos">c</a></body></html>' > "$S/index.html"
+print '<html lang="tr"><body><h1>x</h1><h1>y</h1><h4>z</h4><a href="/yok/">k</a><a href="#bos">c</a><img src="/yok.webp"><img src="/assets/var.webp" alt=""></body></html>' > "$S/index.html"
+mkdir -p "$S/assets"; print x > "$S/assets/var.webp"
 print '<html><body><h1>x</h1><a href="../b/">göreli sağlam</a><a href="c/">göreli kırık</a></body></html>' > "$S/tr/a/index.html"
 print '<html lang="tr"><body><h1>b</h1></body></html>' > "$S/tr/b/index.html"
 print '<html lang="tr"><head><link rel="alternate" hreflang="en" href="https://ornek.io/en/a/"></head><body><h1>g</h1></body></html>' > "$S/tr/b/g.html"
@@ -34,8 +36,8 @@ if bin/yapi-kontrol "$S" > "$T/y.txt"; then print "BAŞARISIZ: yapi-kontrol bozu
 else
   bekle yapi-kontrol "$T/y.txt" "h1 sayısı 2" "başlık atlaması" "kırık bağlantı /yok/" "çapa yok #bos" \
     "lang yok" "kırık bağlantı c/" "izinsiz ad ['memora', 'oneday-privacy.html']" \
-    "dil karşılığı yok /tr/yok/" "dil karşılığı geri bağlamıyor /en/a/"
-  temiz_olmali yapi-kontrol "$T/y.txt" "kırık bağlantı ../b/"
+    "dil karşılığı yok /tr/yok/" "dil karşılığı geri bağlamıyor /en/a/" "alt yok /yok.webp" "görsel yok /yok.webp"
+  temiz_olmali yapi-kontrol "$T/y.txt" "kırık bağlantı ../b/" "/assets/var.webp"
 fi
 
 # 2) kaynak-kontrol

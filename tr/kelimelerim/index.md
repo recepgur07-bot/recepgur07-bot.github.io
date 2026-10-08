@@ -13,6 +13,8 @@ Kelimelerim, İngilizce kelime dağarcığınızı 6 farklı oyunla, ezbersiz ve
 
 {% include app-links.html slug="kelimelerim" %}
 
+{% include screenshots.html slug="kelimelerim" %}
+
 ## Oyunla öğrenin
 
 - **Quiz:** 4 şıklı hızlı testlerle bilginizi ölçün.

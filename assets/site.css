@@ -102,7 +102,19 @@ a:hover { text-decoration-thickness: 2px; }
   border-radius: .75rem;
   padding: .25rem 1.25rem .75rem;
 }
+.app-card { display: flex; gap: 1rem; align-items: flex-start; }
+.app-card > div { min-width: 0; flex: 1; }
 .app-card h3, .app-card h4 { margin-top: .75rem; }
+.app-icon { flex: none; border-radius: 22%; margin-top: 1rem; box-shadow: 0 0 0 1px var(--border); }
+.app-head { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+.app-head .app-icon { margin-top: 0; }
+.app-head .facts { flex: 1 1 12rem; }
+
+/* Ekran görüntüleri: dar ekranda yatay kaydırılan şerit yok; sütunlara dizilir. */
+.shots { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 36rem) { .shots { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.shots.shots-wide { grid-template-columns: minmax(0, 1fr); }
+.shots img { display: block; width: 100%; height: auto; border-radius: .75rem; border: 1px solid var(--border); background: var(--card); }
 .app-card h4 { font-size: 1.1rem; margin-bottom: .25rem; line-height: 1.25; }
 
 .facts { display: grid; gap: .25rem; margin: 1rem 0; }
@@ -156,7 +168,7 @@ details[open] summary { margin-bottom: .25rem; }
 }
 @media (forced-colors: active) {
   .button { border: 2px solid ButtonText; }
-  .app-card, .toc, details { border-color: CanvasText; }
+  .app-card, .toc, details, .shots img { border-color: CanvasText; }
   :focus-visible { outline: 3px solid Highlight; }
   .skip:focus { outline: 3px solid Highlight; }
 }
@@ -164,4 +176,9 @@ details[open] summary { margin-bottom: .25rem; }
 @media print {
   .site-header, .site-footer nav, .skip, .top { display: none; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .85em; }
+}
+
+@media (max-width: 26rem) {
+  .app-card .app-icon { width: 48px; height: 48px; }
+  .app-head .app-icon { width: 72px; height: 72px; }
 }

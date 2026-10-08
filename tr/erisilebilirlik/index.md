@@ -31,6 +31,7 @@ Amacımız, günlük araçları herkes için kullanışlı hâle getirmek. Uygul
 - Yazılar tarayıcınızın yazı boyutuna uyar; sayfa büyütüldüğünde veya dar ekranda yatay kaydırma gerektirmeden yeniden dizilir.
 - Açık ve koyu görünüm sisteminizi izler. Yüksek karşıtlık ve zorunlu renk (ör. Windows Yüksek Karşıtlık) ayarlarına uyulur; hareket azaltma tercihine uyulur.
 - Türkçe ve İngilizce sayfalar birbirine bağlıdır; başka dildeki ifadeler ekran okuyucunun doğru telaffuz etmesi için dil bilgisiyle işaretlenir.
+- Uygulama sayfalarındaki her ekran görüntüsünün, ekranda görüneni ve görseldeki yazıyı anlatan bir açıklaması vardır. Uygulama simgeleri süs olarak ekran okuyucuya okunmaz; uygulamanın adı hemen yanında yazılıdır.
 - Açılır bölümler yalnız tarayıcının kendi açılır öğesiyle yapılır; temel bilgi açılır bölüm içine gizlenmez.
 - Çerez, analitik, izleme, dış yazı tipi veya dış betik yoktur; sayfalar betik olmadan çalışır.
 

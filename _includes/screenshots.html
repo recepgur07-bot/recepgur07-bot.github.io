@@ -1,0 +1,16 @@
+{%- comment -%}
+Uygulama sayfasındaki ekran görüntüleri. Kullanım: {% include screenshots.html slug="resort" %}
+Açıklamalar _data/screens.yml'de; görseller assets/img/<slug>/<dil>-<sıra>.webp.
+{%- endcomment -%}
+{%- assign t = site.data.ui[page.lang] -%}
+{%- assign alts = site.data.screens[include.slug][page.lang] -%}
+{%- assign mac = false -%}
+{%- if include.slug == "framemate" %}{% assign mac = true %}{% endif -%}
+{%- if alts %}
+<h2 id="ekranlar">{{ t.screenshots }}</h2>
+<ul class="shots{% if mac %} shots-wide{% endif %}">
+{%- for alt in alts %}
+  <li><img src="{{ '/assets/img/' | append: include.slug | append: '/' | append: page.lang | append: '-' | append: forloop.index | append: '.webp' | relative_url }}" alt="{{ alt | escape }}"{% if mac %} width="1000" height="625"{% else %} width="600" height="1304"{% endif %} loading="lazy" decoding="async"></li>
+{%- endfor %}
+</ul>
+{%- endif %}

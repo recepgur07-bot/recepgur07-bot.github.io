@@ -4,11 +4,14 @@ Bir uygulamanın bilgi kutusu ve bağlantıları. Kullanım: {% include app-link
 {%- assign t = site.data.ui[page.lang] -%}
 {%- assign app = site.data.apps | where: "slug", include.slug | first -%}
 {%- assign a = app[page.lang] -%}
+<div class="app-head">
+<img class="app-icon" src="{{ '/assets/img/icons/' | append: app.slug | append: '.webp' | relative_url }}" alt="" width="96" height="96" decoding="async">
 <dl class="facts">
   {%- if a.platforms %}<div><dt>{{ t.platforms }}</dt><dd>{{ a.platforms }}</dd></div>{% endif %}
   {%- if a.requires %}<div><dt>{{ t.requires }}</dt><dd>{{ a.requires }}</dd></div>{% endif %}
   {%- if include.languages %}<div><dt>{{ t.languages }}</dt><dd>{{ include.languages }}</dd></div>{% endif %}
 </dl>
+</div>
 <ul class="actions">
   <li><a class="button" href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></li>
   {%- if include.guide %}

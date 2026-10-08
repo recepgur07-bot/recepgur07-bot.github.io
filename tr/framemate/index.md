@@ -13,6 +13,8 @@ Mac'inizde kendinizi yatay ya da dikey video olarak çekin, ekranınızı ya da 
 
 {% include app-links.html slug="framemate" guide="/tr/framemate/kilavuz/" %}
 
+{% include screenshots.html slug="framemate" %}
+
 ## Gizlilik ve ücret
 
 - Kayıtlarınız Mac'inizde işlenir ve saklanır. Hesap, bulut yüklemesi, reklam, analiz ya da takip yoktur.

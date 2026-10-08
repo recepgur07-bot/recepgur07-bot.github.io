@@ -13,6 +13,8 @@ On your Mac, record yourself as landscape or portrait video, record your screen 
 
 {% include app-links.html slug="framemate" guide="/en/framemate/guide/" %}
 
+{% include screenshots.html slug="framemate" %}
+
 ## Privacy and price
 
 - Your recordings are processed and stored on your Mac. There is no account, no cloud upload, no ads, no analytics and no tracking.

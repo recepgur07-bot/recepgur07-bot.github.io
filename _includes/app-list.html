@@ -11,6 +11,8 @@ Kendi sayfası olan uygulamanın başlığı o sayfaya bağlanır; her kartta Ap
 {%- for app in apps %}
   {%- assign a = app[page.lang] %}
   <li class="app-card">
+    <img class="app-icon" src="{{ '/assets/img/icons/' | append: app.slug | append: '.webp' | relative_url }}" alt="" width="64" height="64" decoding="async">
+    <div>
     {%- if app.page %}
     <h4><a href="{{ '/' | append: page.lang | append: '/' | append: app.slug | append: '/' | relative_url }}">{{ a.name }}</a></h4>
     <p class="subtitle">{{ a.subtitle }}</p>
@@ -21,6 +23,7 @@ Kendi sayfası olan uygulamanın başlığı o sayfaya bağlanır; her kartta Ap
     <p class="subtitle">{{ a.subtitle }}{% if a.platforms %} · {{ a.platforms }}{% endif %}</p>
     <p><a href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></p>
     {%- endif %}
+    </div>
   </li>
 {%- endfor %}
 </ul>

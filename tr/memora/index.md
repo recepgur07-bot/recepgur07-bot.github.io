@@ -13,6 +13,8 @@ Binlerce fotoğraf ve video arasında aradığınızı kolayca bulun, arşiviniz
 
 {% include app-links.html slug="memora" guide="/tr/memora/kilavuz/" languages="Türkçe, İngilizce, Almanca, İspanyolca, Portekizce, Arapça" %}
 
+{% include screenshots.html slug="memora" %}
+
 ## Gizlilik ve ücret
 
 - Memora fotoğraflarınızı kopyalamaz, taşımaz ve hiçbir yere yüklemez. Arşiviniz Apple Fotoğraflar'da kalır; Memora onu olduğu yerde okur.

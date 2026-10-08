@@ -1,0 +1,49 @@
+# Uygulama sayfalarındaki ekran görüntüleri. Dosyalar: assets/img/<slug>/<dil>-<sıra>.webp
+# Kaynak: uygulamanın fastlane/screenshots_final (FrameMate: fastlane/screenshots) mağaza görselleri.
+# Her görselin ekran okuyucu açıklaması zorunludur; görseldeki yazıyı ve ekranda görüneni anlatır.
+# Görsel kuralları: AGENTS.md → Görseller.
+resort:
+  tr:
+    - "Oyun ekranı, Bölüm 1: renkli sıvılarla dolu üç tüp ve iki boş tüp; altta Geri al, Yeniden başlat, İpucu ve Ayarlar düğmeleri. Görsel yazısı: Renkleri sırala. Reklamsız, kendi hızında."
+    - "Oyun ekranında bir tüp seçilmiş ve yukarı kalkmış, döküleceği tüp bekleniyor. Görsel yazısı: Seç ve dök. Acele yok, rahatça dene."
+    - "Ana ekran: Devam et, Günlük bulmaca, Temalar, İstatistikler ve Nasıl oynanır seçenekleri. Görsel yazısı: Her gün yeni bulmaca. İstediğin gün oyna."
+  en:
+    - "Game screen, Level 1: three tubes filled with coloured liquids and two empty tubes; Undo, Restart, Hint and Settings buttons at the bottom. Image text: Sort the colours. No ads. Play at your own pace."
+    - "Game screen with one tube selected and lifted, waiting for the tube to pour into. Image text: Pick and pour. No rush. Play relaxed."
+    - "Home screen with Continue, Daily puzzle, Themes, Statistics and How to play. Image text: A new puzzle every day. Play on any day you like."
+memora:
+  tr:
+    - "Arşiv ekranı: fotoğraflar tarihe göre gruplanmış; üstte Kapsam, Tarihe git, Sıralama ve etiketler seçenekleri. Görsel yazısı: Fotoğraflarını bul, kaybolma."
+    - "Ara ekranı: arama kutusunda Deniz Manzarası yazılı, altta bir sonuç listeleniyor. Görsel yazısı: Ada, etikete, metne göre anında ara."
+    - "Erişilebilirlik ayarları: metin içeriğini söyle, etiketleri oku, otomatik okuma ve video seçenekleri için anahtarlar. Görsel yazısı: VoiceOver'a özel tasarlandı."
+  en:
+    - "Library screen: photos grouped by date, with Scope, Go to date, and Sorting and tags options at the top. Image text: Find your photos, never get lost."
+    - "Search screen: Seaside Walk typed in the search field, with one result listed. Image text: Instant search by name, tag or text."
+    - "Accessibility settings: switches for announcing text presence, reading tags, automatic reading and video options. Image text: Designed for VoiceOver."
+folio:
+  tr:
+    - "Market alışverişi defteri: süt, yumurta, ekmek gibi maddeler alınacak olarak listelenmiş, üstte ürün ekleme alanı. Görsel yazısı: Alışverişini kolayca yönet."
+    - "Defterler ekranı: Market Alışverişi ve Yapılacaklar defterleri, altında Geçmiş, Silinenler ve Ayarlar. Görsel yazısı: İstediğin kadar defter oluştur."
+    - "Ayarlar ekranı: görünüm, tamamlanan maddelerin görünümü, dil ve bildirim seçenekleri. Görsel yazısı: İhtiyacına göre özelleştir."
+  en:
+    - "Grocery shopping notebook: items such as milk, eggs and bread listed as to buy, with a field for adding products at the top. Image text: Manage shopping with ease."
+    - "Notebooks screen: Grocery Shopping and To-Do List notebooks, with History, Trash and Settings below. Image text: Create as many notebooks as you like."
+    - "Settings screen: appearance, completed items, language and notification options. Image text: Customize it your way."
+kelimelerim:
+  tr:
+    - "Oyunlar ekranı: Quiz, Maraton, Zamana Karşı, Eşleştirme, Kelime Bulmaca ve Kelime Avı oyunları ile Kelime Kütüphanesi. Görsel yazısı: 6 farklı oyunla kelime öğren."
+    - "Kelime Avı oyunu: puan ve bulunan kelime sayısı, altında harf kutuları ve Sil, Sıfırla, Tamam düğmeleri. Görsel yazısı: Harf ızgarasında kelime avına çık."
+    - "Quiz ekranı: İngilizce mount kelimesi ve dört Türkçe şık; her şıkta sesli okuma düğmesi. Görsel yazısı: 4 şıktan doğrusunu bil."
+  en:
+    - "Games screen in the app's Turkish interface: a list of six games and the word library. Image text: Learn words with 6 fun games."
+    - "A word hunt game in the Turkish interface: score and words found, with letter tiles and buttons to delete, reset and finish below. Image text: Hunt for words in the letter grid."
+    - "Quiz screen: the English word mount with four Turkish answer choices, each with a play sound button. Image text: Pick the right answer from 4 choices."
+framemate:
+  tr:
+    - "FrameMate ana penceresi: kayıt modu seçimi, ekran ve kamera önizlemesi, seçili kayıt ayarları ve kırmızı kayıt düğmesi. Görsel yazısı: Ekran, kamera ve ses tek akışta."
+    - "Kayıt sürerken pencere: büyük süre göstergesi, Kayıt sürüyor yazısı, duraklat ve durdur düğmeleri. Görsel yazısı: Kayıt sırasında kontrol sizde."
+    - "Yatay video kaydı modunda kamera önizlemesi ve kayıt düğmesi. Görsel yazısı: Kameralı kayıtları güvenle başlatın."
+  en:
+    - "FrameMate main window in horizontal video recording mode, with the camera preview area. Image text: Record screen, camera, and audio."
+    - "Window during recording: a large elapsed time display, the Recording status, and pause and stop buttons. Image text: Stay in control while recording."
+    - "Horizontal video recording mode with the camera preview area. Image text: Prepare camera recordings."

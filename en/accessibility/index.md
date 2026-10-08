@@ -31,6 +31,7 @@ Our goal is to make everyday tools useful for everyone. We consider screen-reade
 - Text follows your browser's text size, and pages reflow without horizontal scrolling when zoomed or on narrow screens.
 - The light or dark appearance follows your system. Increased contrast and forced colors settings (such as Windows High Contrast) are respected, and so is the reduce motion preference.
 - Turkish and English pages link to each other, and phrases in another language are marked so that screen readers pronounce them correctly.
+- Every screenshot on the app pages has a description of what is on screen and the text in the image. App icons are decorative and skipped by screen readers; the app's name is written right next to them.
 - Expandable sections use only the browser's built-in disclosure element, and essential information is never hidden inside one.
 - There are no cookies, analytics, tracking, external fonts or external scripts, and pages work without scripts.
 

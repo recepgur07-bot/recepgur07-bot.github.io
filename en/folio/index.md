@@ -15,6 +15,8 @@ Turn anything you need to keep track of into a notebook you can actually use: gr
 
 {% include app-links.html slug="folio" %}
 
+{% include screenshots.html slug="folio" %}
+
 ## Ready-made templates
 
 - **Finance:** Payments, Expenses, Subscriptions, Debt/Credit

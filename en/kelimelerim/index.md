@@ -13,6 +13,8 @@ Kelimelerim turns learning English words into a game: 13,629 words across all si
 
 {% include app-links.html slug="kelimelerim" %}
 
+{% include screenshots.html slug="kelimelerim" %}
+
 ## Learn through play
 
 - **Quiz:** test yourself with quick 4-option questions.

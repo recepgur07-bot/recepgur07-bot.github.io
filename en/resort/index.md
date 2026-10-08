@@ -13,6 +13,8 @@ Sort colors and solve puzzles at your own pace. ReSort is an ad-free water sort 
 
 {% include app-links.html slug="resort" languages="Interface in 51 languages" %}
 
+{% include screenshots.html slug="resort" %}
+
 ## How to play
 
 Pick a tube, then tap the tube you want to pour into. Bring matching colors together. A level is complete when each color fills a tube of its own.

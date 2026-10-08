@@ -13,6 +13,8 @@ Renkleri sıralayın, bulmacayı kendi hızınızda çözün. ReSort reklamsız 
 
 {% include app-links.html slug="resort" languages="51 dilde arayüz" %}
 
+{% include screenshots.html slug="resort" %}
+
 ## Nasıl oynanır
 
 Bir tüp seçin, sonra sıvıyı dökmek istediğiniz tüpe dokunun. Aynı renkleri bir araya getirin; her renk kendi tüpünü tamamen doldurduğunda bölüm tamamlanır.

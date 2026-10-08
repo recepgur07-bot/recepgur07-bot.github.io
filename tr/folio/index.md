@@ -15,6 +15,8 @@ Takip etmeniz gereken her şeyi gerçekten kullanabileceğiniz bir deftere dön�
 
 {% include app-links.html slug="folio" %}
 
+{% include screenshots.html slug="folio" %}
+
 ## Hazır şablonlar
 
 - **Finans:** Ödemeler, Harcamalar, Abonelikler, Borç/Alacak

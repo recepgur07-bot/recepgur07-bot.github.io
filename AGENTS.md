@@ -66,12 +66,33 @@ uygulama kodu + fastlane/metadata      (gerçek)
    `tr/hakkinda/` ve `en/about/` yalnız Forali markasını anlatır; kişisel bilgi içermez.
 9. **Sır yok.** Token, anahtar, parola bu depoya girmez.
 
+## Görseller
+
+GitHub Pages sınırları (yayınlanan site ve depo için önerilen 1 GB, dosya başına 100 MB) bizim
+ihtiyacımızın çok üstündedir; asıl risk, git'in her eski sürümü saklamasıyla deponun yavaşça büyümesidir.
+
+- **Kaynak:** simge `Assets.xcassets/AppIcon` (en büyük boy), ekran görüntüsü uygulamanın
+  `fastlane/screenshots_final/<dil>` mağaza görselleri. Görsel uydurulmaz ve yapay üretilmez.
+- **Biçim ve boy:** yalnız WebP. Simge 128×128; telefon görüntüsü 600 px, Mac görüntüsü 1000 px
+  genişlik; kalite ~78, üstveri silinir (`magick … -resize … -strip -quality 78`).
+  Tek görsel 300 KB'ı, `assets/img/` toplamı 10 MB'ı geçmez. Mağazadaki büyük PNG orijinaller depoya girmez.
+- **Yer:** `assets/img/icons/<slug>.webp`, `assets/img/<slug>/<dil>-<sıra>.webp` (`tr`, `en`).
+  Türkçe sayfada Türkçe, İngilizce sayfada İngilizce mağaza görseli kullanılır.
+- **Erişilebilirlik:** simge uygulama adının yanında süstür, `alt=""` alır. Her ekran görüntüsünün
+  `_data/screens.yml`'de iki dilde açıklaması zorunludur: ekranda görüneni ve görseldeki yazıyı anlatır.
+  Önemli bilgi yalnız görselde kalmaz, sayfa metninde de yazar. Görseller `width`/`height` taşır,
+  dar ekranda taşmaz, yatay kaydırılan şerit kullanılmaz.
+- **Yenileme:** görsel yalnız uygulama arayüzü gerçekten değişince yenilenir; aynı görsel tekrar tekrar
+  yeniden sıkıştırılıp commit'lenmez. Kullanılmayan görsel silinir.
+
 ## Yapı
 
 | Yol | İçerik |
 |---|---|
 | `_data/apps.yml` | Uygulama kataloğu (ad, alt başlık, cihaz, sistem, App Store, gizlilik, destek) |
 | `_data/ui.yml` | Her sayfada tekrar eden arayüz metinleri, dil başına |
+| `_data/screens.yml` | Ekran görüntülerinin iki dilli açıklamaları |
+| `assets/img/` | Simgeler ve ekran görüntüleri (WebP; kurallar: Görseller) |
 | `_layouts/default.html` | Ortak iskelet |
 | `_includes/` | Uygulama bilgi kutusu, uygulama listesi |
 | `tr/<slug>/index.md`, `en/<slug>/index.md` | Genel bakış |

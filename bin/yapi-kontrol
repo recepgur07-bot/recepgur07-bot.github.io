@@ -2,7 +2,8 @@
 """Derlenmiş sitede (_site) erişilebilirlik iskeletini denetler. Salt okunur.
 
 Her sayfa: tek h1, başlık düzeyi atlamaz, html lang var, "İçeriğe atla" hedefi var,
-iç bağlantılar ve #çapalar gerçek, dil karşılığı (rel=alternate) var ve geri bağlıyor.
+iç bağlantılar ve #çapalar gerçek, dil karşılığı (rel=alternate) var ve geri bağlıyor,
+her görselin alt özniteliği var (süs görseli alt="") ve dosyası gerçek.
 Kökte yalnız izinli adlar bulunur: eski proje sayfalarının adresleri (/memora/,
 /folio-privacy/, /oneday-privacy …) kökte açılan bir klasör ya da dosyayla ezilmesin.
 Çıkış kodu: sorun varsa 1.
@@ -19,6 +20,7 @@ class Sayfa(HTMLParser):
         super().__init__()
         self.basliklar, self.idler, self.linkler, self.lang = [], set(), [], None
         self.alternatif = {}
+        self.gorseller = []
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == "html":
@@ -27,6 +29,8 @@ class Sayfa(HTMLParser):
             self.basliklar.append(int(tag[1]))
         if "id" in a:
             self.idler.add(a["id"])
+        if tag == "img":
+            self.gorseller.append((a.get("src") or "", "alt" in a))
         if tag == "a" and a.get("href"):
             self.linkler.append(a["href"])
         if tag == "link" and a.get("rel") == "alternate" and a.get("hreflang") and a.get("href"):
@@ -71,6 +75,11 @@ for ad, s in sorted(sayfalar.items()):
             hatalar.append(f"kırık bağlantı {l}")
         elif capa and capa not in sayfalar[hedef].idler:
             hatalar.append(f"çapa yok {l}")
+    for src, alt_var in s.gorseller:
+        if not alt_var:
+            hatalar.append(f"alt yok {src}")
+        if not re.match(r"[a-z]+:", src) and not (SITE / coz(ad, src)).is_file():
+            hatalar.append(f"görsel yok {src}")
     for dil, yol in s.alternatif.items():
         if dil == s.lang:
             continue

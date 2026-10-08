@@ -13,6 +13,8 @@ Find what you are looking for among thousands of photos and videos, and organize
 
 {% include app-links.html slug="memora" guide="/en/memora/guide/" languages="Turkish, English, German, Spanish, Portuguese, Arabic" %}
 
+{% include screenshots.html slug="memora" %}
+
 ## Privacy and price
 
 - Memora does not copy, move or upload your photos. Your library stays in Apple Photos; Memora reads it where it is.

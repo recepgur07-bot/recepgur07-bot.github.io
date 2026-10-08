@@ -35,6 +35,7 @@ tr:
   press: Basın ve medya
   press_url: /tr/basin/
   more_nav: Diğer sayfalar
+  screenshots: Ekran görüntüleri
   categories:
     - key: oyun
       name: Oyunlar
@@ -80,6 +81,7 @@ en:
   press: Press and media
   press_url: /en/press/
   more_nav: More pages
+  screenshots: Screenshots
   categories:
     - key: oyun
       name: Games
