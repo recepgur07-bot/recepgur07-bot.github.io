@@ -12,7 +12,7 @@ Yeni uygulamalarımızı, önemli güncellemeleri ve bu sitedeki değişiklikler
 
 ## 8 Ekim 2026: ReSort yayında
 
-Sakin ve reklamsız su sıralama bulmacamız [ReSort](/tr/resort/), iPhone ve iPad için App Store'da. Süre ve hamle sınırı yoktur; dokunarak, klavyeyle veya VoiceOver ile oynanmak üzere tasarlandı.
+Sakin ve reklamsız su sıralama bulmacamız [ReSort](/tr/resort/), iPhone ve iPad için App Store'da: [ReSort'u App Store'da görüntüleyin](https://apps.apple.com/app/id6819550779). Süre ve hamle sınırı yoktur; dokunarak, klavyeyle veya VoiceOver ile oynanmak üzere tasarlandı.
 
 ## 8 Ekim 2026: Yeni yardım ve gizlilik sayfaları
 
@@ -20,7 +20,7 @@ Sitemize [Gizlilik ilkelerimiz](/tr/gizlilik/), [Sık sorulan sorular](/tr/sss/)
 
 ## 7 Ekim 2026: Forali yeni adresinde
 
-Uygulamalarımızı tek çatı altında topladığımız sitemiz artık forali.app adresinde. Eski adresler buraya yönlenir. Destek için support@forali.app, genel iletişim için hello@forali.app adreslerini kullanabilirsiniz.
+Uygulamalarımızı tek çatı altında topladığımız sitemiz artık forali.app adresinde. Eski adresler buraya yönlenir. Destek için [support@forali.app](mailto:support@forali.app), genel iletişim için [hello@forali.app](mailto:hello@forali.app) adreslerini kullanabilirsiniz.
 
 ## 5 Ekim 2026: FrameMate kullanım kılavuzu
 

@@ -1,6 +1,6 @@
 {%- comment -%}
 Ana sayfadaki uygulama listesi; _data/apps.yml'deki category alanına göre gruplanır.
-Kendi sayfası olan uygulamanın başlığı o sayfaya, olmayanınki App Store'a bağlanır.
+Kendi sayfası olan uygulamanın başlığı o sayfaya bağlanır; her kartta App Store bağlantısı vardır.
 {%- endcomment -%}
 {%- assign t = site.data.ui[page.lang] -%}
 {%- for c in t.categories %}
@@ -15,6 +15,7 @@ Kendi sayfası olan uygulamanın başlığı o sayfaya, olmayanınki App Store'a
     <h4><a href="{{ '/' | append: page.lang | append: '/' | append: app.slug | append: '/' | relative_url }}">{{ a.name }}</a></h4>
     <p class="subtitle">{{ a.subtitle }}</p>
     <p>{% if a.audience %}{{ a.audience }}. {% endif %}{{ t.platforms }}: {{ a.platforms }}.</p>
+    <p><a href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></p>
     {%- else %}
     <h4>{{ a.name }}</h4>
     <p class="subtitle">{{ a.subtitle }}{% if a.platforms %} · {{ a.platforms }}{% endif %}</p>

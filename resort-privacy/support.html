@@ -4,11 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ReSort — Destek / Support</title>
-<style>body{font:17px/1.6 -apple-system,system-ui,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem}</style>
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--link:#0a4fb8;--focus:#b3261e;--border:#c9ccd1}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#f0f0f0;--link:#8ab4ff;--focus:#ffb4ab;--border:#44474d}}
+body{font:1.0625rem/1.6 -apple-system,system-ui,sans-serif;max-width:40rem;margin:0 auto;padding:1rem;background:var(--bg);color:var(--fg)}
+a{color:var(--link);text-decoration:underline;text-underline-offset:.15em;overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+main:focus{outline:none}
+.skip{position:absolute;left:1rem;top:-10rem;padding:.5rem 1rem;background:var(--link);color:var(--bg)}
+.skip:focus{top:.5rem}
+nav ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
+nav a,footer a{display:inline-block;min-height:2.75rem;padding:.5rem 0}
+h1,h2,h3{line-height:1.25}
+section{border-top:1px solid var(--border);margin-top:2rem}
+footer{border-top:1px solid var(--border);margin-top:2rem}
+@media (forced-colors:active){:focus-visible{outline-color:Highlight}}
+</style>
 </head>
 <body>
-<a href="#en">English version</a> · <a href="index.html">Gizlilik Politikası / Privacy Policy</a>
-<main>
+<a class="skip" href="#icerik">İçeriğe atla <span lang="en">/ Skip to content</span></a>
+<header>
+<nav aria-label="ReSort sayfaları">
+<ul>
+<li><a href="#en" lang="en">Read in English</a></li>
+<li><a href="index.html">ReSort gizlilik politikası <span lang="en">/ ReSort privacy policy</span></a></li>
+</ul>
+</nav>
+</header>
+<main id="icerik" tabindex="-1">
 <h1>ReSort — Destek</h1>
 <p>Soru, öneri ve hata bildirimi için bize e-posta gönderin: <a href="mailto:support@forali.app">support@forali.app</a></p>
 <h2>Ücretsiz bölümler ve Tam Sürüm</h2>
@@ -20,9 +44,8 @@
 <p>Oyun VoiceOver ile oynanmak için tasarlandı. Tüpler arasında kaydırın, çift dokunarak kaynağı seçin, sonra hedef tüpe çift dokunun. Ayrıntılar uygulamadaki Nasıl oynanır sayfasında ve öğreticidedir.</p>
 <h2>Kullanım Koşulları</h2>
 <p>Apple standart son kullanıcı lisans sözleşmesi geçerlidir: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Kullanım Koşulları (EULA)</a></p>
-</main>
-<section id="en" lang="en">
-<h2>ReSort — Support</h2>
+<section id="en" lang="en" aria-labelledby="en-baslik">
+<h2 id="en-baslik">ReSort — Support</h2>
 <p>For questions, suggestions and bug reports, email <a href="mailto:support@forali.app">support@forali.app</a></p>
 <h3>Free levels and Full Version</h3>
 <p>The first 10 levels and the first 10 daily puzzles are free. After that, the Full Version is needed. The tutorial, How to play, settings, statistics and every accessibility feature always stay open; your progress is never deleted.</p>
@@ -34,6 +57,7 @@
 <h3>Terms of Use</h3>
 <p>Apple's standard end user license agreement applies: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Terms of Use (EULA)</a></p>
 </section>
-<footer><p>ReSort, <a href="https://forali.app/">Forali</a> uygulamasıdır. · ReSort is an app by <a href="https://forali.app/" lang="en">Forali</a>.</p></footer>
+</main>
+<footer><p>ReSort, <a href="https://forali.app/">Forali</a> uygulamasıdır. · <span lang="en">ReSort is an app by <a href="https://forali.app/">Forali</a>.</span></p></footer>
 </body>
 </html>

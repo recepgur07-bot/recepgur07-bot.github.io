@@ -4,11 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ReSort — Gizlilik Politikası / Privacy Policy</title>
-<style>body{font:17px/1.6 -apple-system,system-ui,sans-serif;max-width:40rem;margin:2rem auto;padding:0 1rem}</style>
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--link:#0a4fb8;--focus:#b3261e;--border:#c9ccd1}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#f0f0f0;--link:#8ab4ff;--focus:#ffb4ab;--border:#44474d}}
+body{font:1.0625rem/1.6 -apple-system,system-ui,sans-serif;max-width:40rem;margin:0 auto;padding:1rem;background:var(--bg);color:var(--fg)}
+a{color:var(--link);text-decoration:underline;text-underline-offset:.15em;overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+main:focus{outline:none}
+.skip{position:absolute;left:1rem;top:-10rem;padding:.5rem 1rem;background:var(--link);color:var(--bg)}
+.skip:focus{top:.5rem}
+nav ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.25rem 1.25rem}
+nav a,footer a{display:inline-block;min-height:2.75rem;padding:.5rem 0}
+h1,h2,h3{line-height:1.25}
+section{border-top:1px solid var(--border);margin-top:2rem}
+footer{border-top:1px solid var(--border);margin-top:2rem}
+@media (forced-colors:active){:focus-visible{outline-color:Highlight}}
+</style>
 </head>
 <body>
-<a href="#en">English version</a> · <a href="support.html">Destek / Support</a>
-<main>
+<a class="skip" href="#icerik">İçeriğe atla <span lang="en">/ Skip to content</span></a>
+<header>
+<nav aria-label="ReSort sayfaları">
+<ul>
+<li><a href="#en" lang="en">Read in English</a></li>
+<li><a href="support.html">ReSort destek sayfası <span lang="en">/ ReSort support</span></a></li>
+</ul>
+</nav>
+</header>
+<main id="icerik" tabindex="-1">
 <h1>ReSort — Gizlilik Politikası</h1>
 <p>Son güncelleme: 5 Ekim 2026</p>
 <h2>Kısaca</h2>
@@ -19,9 +43,8 @@
 <p>Tam Sürüm satın alımı Apple App Store tarafından işlenir. Satın alma durumu Apple'ın kaydından okunur ve yalnız cihazınızda kullanılır. Ödeme bilgilerinizi görmeyiz.</p>
 <h2>İletişim</h2>
 <p>Sorularınız için: <a href="mailto:support@forali.app">support@forali.app</a></p>
-</main>
-<section id="en" lang="en">
-<h2>ReSort — Privacy Policy</h2>
+<section id="en" lang="en" aria-labelledby="en-baslik">
+<h2 id="en-baslik">ReSort — Privacy Policy</h2>
 <p>Last updated: October 5, 2026</p>
 <h3>In short</h3>
 <p>ReSort does not collect personal data. There are no accounts, ads, analytics or tracking. The app does not connect to the internet; only the Apple App Store is used for purchases.</p>
@@ -32,6 +55,7 @@
 <h3>Contact</h3>
 <p>Questions: <a href="mailto:support@forali.app">support@forali.app</a></p>
 </section>
-<footer><p>ReSort, <a href="https://forali.app/">Forali</a> uygulamasıdır. · ReSort is an app by <a href="https://forali.app/" lang="en">Forali</a>.</p></footer>
+</main>
+<footer><p>ReSort, <a href="https://forali.app/">Forali</a> uygulamasıdır. · <span lang="en">ReSort is an app by <a href="https://forali.app/">Forali</a>.</span></p></footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # Arayüzde her sayfada tekrar eden metinler. Yeni dil = yeni anahtar grubu.
 tr:
   skip: İçeriğe atla
-  site_nav: Site
+  site_nav: Ana menü
   home: Uygulamalar
   lang_name: Türkçe
   other_lang_label: English
@@ -46,7 +46,7 @@ tr:
       name: Öğrenme
 en:
   skip: Skip to content
-  site_nav: Site
+  site_nav: Main menu
   home: Apps
   lang_name: English
   other_lang_label: Türkçe
