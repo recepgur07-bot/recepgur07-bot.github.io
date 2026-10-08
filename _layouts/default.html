@@ -39,6 +39,10 @@
 {{ content }}
   </main>
   <footer class="site-footer">
+    <nav aria-label="{{ t.more_nav }}">
+      <a href="{{ t.news_url | relative_url }}"{% if page.url == t.news_url %} aria-current="page"{% endif %}>{{ t.news }}</a>
+      <a href="{{ t.press_url | relative_url }}"{% if page.url == t.press_url %} aria-current="page"{% endif %}>{{ t.press }}</a>
+    </nav>
     <p>{{ t.footer_privacy }}</p>
     <p>© {{ site.time | date: "%Y" }} {{ t.footer_owner }}</p>
   </footer>

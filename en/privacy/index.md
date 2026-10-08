@@ -13,7 +13,7 @@ Not collecting your personal data is our default. We do not ask for any data an 
 
 ## App Store privacy labels
 
-Every one of our apps on the App Store declares "Data Not Collected" in its App Store privacy label. You can see this label on each app's App Store page.
+As of October 2026, every one of our apps on the App Store declares "Data Not Collected" in its App Store privacy label. You can see this label on each app's App Store page.
 
 ## Where your data stays
 

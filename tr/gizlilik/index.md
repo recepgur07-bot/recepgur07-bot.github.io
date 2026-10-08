@@ -13,7 +13,7 @@ Kişisel verilerinizi toplamamayı varsayılan kabul ediyoruz. Bir uygulamanın 
 
 ## App Store gizlilik etiketleri
 
-Yayındaki uygulamalarımızın tamamı için App Store gizlilik etiketinde "Veri Toplanmaz" beyan edilmiştir. Her uygulamanın App Store sayfasında bu etiketi görebilirsiniz.
+Ekim 2026 itibarıyla yayındaki uygulamalarımızın tamamı için App Store gizlilik etiketinde "Veri Toplanmaz" beyan edilmiştir. Her uygulamanın App Store sayfasında bu etiketi görebilirsiniz.
 
 ## Verileriniz nerede durur
 

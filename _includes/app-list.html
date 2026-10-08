@@ -1,29 +1,27 @@
 {%- comment -%}
-Ana sayfadaki uygulama listesi. Kendi sayfası olanlar önce, bağlantılı başlıkla gelir.
+Ana sayfadaki uygulama listesi; _data/apps.yml'deki category alanına göre gruplanır.
+Kendi sayfası olan uygulamanın başlığı o sayfaya, olmayanınki App Store'a bağlanır.
 {%- endcomment -%}
 {%- assign t = site.data.ui[page.lang] -%}
-{%- assign with_page = site.data.apps | where: "page", true -%}
-{%- assign without_page = site.data.apps | where: "page", false -%}
+{%- for c in t.categories %}
+{%- assign apps = site.data.apps | where: "category", c.key -%}
+{%- if apps.size > 0 %}
+<h3>{{ c.name }}</h3>
 <ul class="app-list">
-{%- for app in with_page %}
+{%- for app in apps %}
   {%- assign a = app[page.lang] %}
   <li class="app-card">
-    <h3><a href="{{ '/' | append: page.lang | append: '/' | append: app.slug | append: '/' | relative_url }}">{{ a.name }}</a></h3>
+    {%- if app.page %}
+    <h4><a href="{{ '/' | append: page.lang | append: '/' | append: app.slug | append: '/' | relative_url }}">{{ a.name }}</a></h4>
     <p class="subtitle">{{ a.subtitle }}</p>
-    <p>{{ a.audience }}. {{ t.platforms }}: {{ a.platforms }}.</p>
-  </li>
-{%- endfor %}
-</ul>
-{%- if without_page.size > 0 %}
-<h2>{{ t.other_apps }}</h2>
-<ul class="app-list">
-{%- for app in without_page %}
-  {%- assign a = app[page.lang] %}
-  <li class="app-card">
-    <h3>{{ a.name }}</h3>
+    <p>{% if a.audience %}{{ a.audience }}. {% endif %}{{ t.platforms }}: {{ a.platforms }}.</p>
+    {%- else %}
+    <h4>{{ a.name }}</h4>
     <p class="subtitle">{{ a.subtitle }}{% if a.platforms %} · {{ a.platforms }}{% endif %}</p>
     <p><a href="{{ app.appstore }}">{{ t.app_store }}<span class="visually-hidden">: {{ a.name }}</span></a></p>
+    {%- endif %}
   </li>
 {%- endfor %}
 </ul>
 {%- endif %}
+{%- endfor %}

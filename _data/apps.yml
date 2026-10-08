@@ -5,10 +5,12 @@
 #
 # page: true  → sitede kendi sayfası var (/tr/<slug>/, /en/<slug>/)
 # page: false → yalnız listede görünür, App Store bağlantısıyla
+# category    → ana sayfadaki grup; adları _data/ui.yml categories altında
 # guide: true → iki dilde kılavuz zorunlu (tr/<slug>/kilavuz.md, en/<slug>/guide.md)
 # Yalnız App Store'da YAYINDA olan uygulamalar listelenir.
 
 - slug: resort
+  category: oyun
   page: true
   appstore: https://apps.apple.com/app/id6819550779
   privacy: https://forali.app/resort-privacy/
@@ -27,6 +29,7 @@
     requires: iOS 18 or later
 
 - slug: memora
+  category: medya
   page: true
   guide: true
   appstore: https://apps.apple.com/app/id6809805472
@@ -46,6 +49,7 @@
     requires: iOS 18 or later
 
 - slug: folio
+  category: gunluk
   page: true
   appstore: https://apps.apple.com/app/id6803817370
   privacy: https://recepgur07-bot.github.io/folio-privacy/
@@ -64,6 +68,7 @@
     requires: iOS 17 / macOS 14 or later
 
 - slug: kelimelerim
+  category: ogrenme
   page: true
   appstore: https://apps.apple.com/app/id6799458502
   privacy: https://recepgur07-bot.github.io/kelimelerim-legal/
@@ -82,6 +87,7 @@
     requires: iOS 17 or later
 
 - slug: tesbihim
+  category: gunluk
   page: false
   appstore: https://apps.apple.com/app/id6792310728
   privacy: https://recepgur07-bot.github.io/oneday-support/tesbihim-privacy
@@ -98,6 +104,7 @@
     requires: iOS 17 or later
 
 - slug: framemate
+  category: medya
   page: true
   guide: true
   appstore: https://apps.apple.com/app/id6762084840
@@ -115,6 +122,7 @@
     requires: macOS 14 or later
 
 - slug: oneday
+  category: gunluk
   page: false
   appstore: https://apps.apple.com/app/id6756538962
   privacy: https://recepgur07-bot.github.io/oneday-privacy

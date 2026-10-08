@@ -30,6 +30,20 @@ tr:
   privacy_page_url: /tr/gizlilik/
   faq: Sık sorulan sorular
   faq_url: /tr/sss/
+  news: Yenilikler
+  news_url: /tr/yenilikler/
+  press: Basın ve medya
+  press_url: /tr/basin/
+  more_nav: Diğer sayfalar
+  categories:
+    - key: oyun
+      name: Oyunlar
+    - key: gunluk
+      name: Günlük araçlar
+    - key: medya
+      name: Fotoğraf ve video
+    - key: ogrenme
+      name: Öğrenme
 en:
   skip: Skip to content
   site_nav: Site
@@ -61,3 +75,17 @@ en:
   privacy_page_url: /en/privacy/
   faq: FAQ
   faq_url: /en/faq/
+  news: News
+  news_url: /en/news/
+  press: Press and media
+  press_url: /en/press/
+  more_nav: More pages
+  categories:
+    - key: oyun
+      name: Games
+    - key: gunluk
+      name: Everyday tools
+    - key: medya
+      name: Photo and video
+    - key: ogrenme
+      name: Learning
