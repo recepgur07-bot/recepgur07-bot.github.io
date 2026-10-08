@@ -8,12 +8,13 @@ description: Forali uygulamaları için destek, gizlilik ve iletişim bağlantı
 ---
 # Destek ve iletişim
 
-Bir uygulamayla ilgili sorun, soru veya öneriniz varsa önce o uygulamanın destek sayfasına bakın. Erişilebilirlik sorunlarını bildirmeniz özellikle değerlidir: hangi cihazı, hangi sistem sürümünü ve hangi yardımcı teknolojiyi (örneğin VoiceOver) kullandığınızı yazarsanız sorunu daha hızlı bulabilirim.
+Bir uygulamayla ilgili sorun, soru veya öneriniz varsa önce [Sık sorulan sorular](/tr/sss/) sayfasına ve o uygulamanın destek sayfasına bakın. Erişilebilirlik sorunlarını bildirmeniz bizim için özellikle değerlidir: hangi cihazı, hangi sistem sürümünü ve hangi yardımcı teknolojiyi (örneğin VoiceOver) kullandığınızı yazarsanız sorunu daha hızlı bulabiliriz.
 
 {% if site.contact_email != "" -%}
-## Genel iletişim
+## E-posta
 
-E-posta: [{{ site.contact_email }}](mailto:{{ site.contact_email }})
+- Uygulama desteği ve sorun bildirimi: [{{ site.support_email }}](mailto:{{ site.support_email }})
+- Genel iletişim, iş birliği ve basın: [{{ site.contact_email }}](mailto:{{ site.contact_email }})
 {% endif %}
 ## Uygulamalara göre destek
 

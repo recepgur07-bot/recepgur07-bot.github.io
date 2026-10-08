@@ -8,6 +8,24 @@
 # guide: true → iki dilde kılavuz zorunlu (tr/<slug>/kilavuz.md, en/<slug>/guide.md)
 # Yalnız App Store'da YAYINDA olan uygulamalar listelenir.
 
+- slug: resort
+  page: true
+  appstore: https://apps.apple.com/app/id6819550779
+  privacy: https://forali.app/resort-privacy/
+  support: https://forali.app/resort-privacy/support.html
+  tr:
+    name: "ReSort: Su Sıralama Bulmacası"
+    subtitle: Sakin, reklamsız renk oyunu
+    audience: Herkes için; dokunarak, klavyeyle veya VoiceOver ile oynanır
+    platforms: iPhone ve iPad
+    requires: iOS 18 veya sonrası
+  en:
+    name: "ReSort: Water Sort Puzzle"
+    subtitle: Relaxing color game, no ads
+    audience: For everyone; play by touch, with a keyboard or with VoiceOver
+    platforms: iPhone and iPad
+    requires: iOS 18 or later
+
 - slug: memora
   page: true
   guide: true

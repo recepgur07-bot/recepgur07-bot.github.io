@@ -4,18 +4,18 @@ layout: default
 lang: tr
 title: Uygulamalar
 alt_url: /en/
-description: Forali — iPhone, iPad ve Mac uygulamaları. Mevcut ürünlerimiz, erişilebilirlik yaklaşımımız ve gelecek hedeflerimiz.
+description: Forali — iPhone, iPad ve Mac için uygulamalar ve oyunlar. Mevcut ürünlerimiz, erişilebilirlik yaklaşımımız ve gelecek hedeflerimiz.
 ---
 # Forali
 
 Tasarımdan itibaren erişilebilir. Herkes için kullanışlı.
 {: .lead}
 
-Forali, iPhone, iPad ve Mac için uygulamalar geliştiren, Türkiye'de Recep Gür tarafından kurulan bir yazılım markasıdır. Amacımız, günlük yaşamdan öğrenmeye ve eğlenceye kadar teknolojinin sunduğu olanakları daha fazla insan için kullanılabilir hâle getirmek.
+Forali, iPhone, iPad ve Mac için uygulamalar ve oyunlar geliştiren bağımsız bir yazılım markasıdır. Amacımız, günlük yaşamdan öğrenmeye ve eğlenceye kadar teknolojinin sunduğu olanakları herkes için daha kullanışlı hâle getirmek.
 
 Erişilebilirliği tasarımın başlangıcından itibaren ele alıyoruz. Görme engelli ve az gören kullanıcıların karşılaştığı engelleri azaltırken, herkes için sade ve anlaşılır deneyimler geliştirmeyi hedefliyoruz.
 
-[Amacımız ve gelecek planlarımız](/tr/hakkinda/) · [Erişilebilirlik yaklaşımımız](/tr/erisilebilirlik/) · [Destek ve iletişim](/tr/iletisim/)
+[Hakkımızda](/tr/hakkinda/) · [Erişilebilirlik yaklaşımımız](/tr/erisilebilirlik/) · [Gizlilik ilkelerimiz](/tr/gizlilik/) · [Sık sorulan sorular](/tr/sss/) · [Destek ve iletişim](/tr/iletisim/)
 
 ## Uygulamalar
 

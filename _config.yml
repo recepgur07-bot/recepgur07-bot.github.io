@@ -1,10 +1,11 @@
 # GitHub Pages "deploy from branch" ile Jekyll yerleşik olarak derlenir.
 # Bu sitede izleme, analitik, dış yazı tipi ve betik YOKTUR; eklenmez.
 title: Forali
-# Marka: Forali — bağımsız geliştirici Recep Gür'ün uygulama çalışmalarının adı (şirket değil).
+# Marka: Forali — bağımsız yazılım markası (şirket değil; şirket/ekip iddiası yazılmaz).
 # Genel iletişim adresi: yalnız posta kutusu kurulup gönderme/alma doğrulanınca doldurulur.
 # Boşken iletişim sayfası bu adresi göstermez.
 contact_email: "hello@forali.app"
+support_email: "support@forali.app"
 url: "https://forali.app"
 baseurl: ""
 markdown: kramdown

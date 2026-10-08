@@ -8,13 +8,19 @@ description: The accessibility approach in Forali apps and on this site, known l
 ---
 # Accessibility
 
-My goal is to make everyday tools useful to more people. I consider screen-reader access, clear navigation and readable interfaces from the start of development. Accessibility is not an add-on; it is the foundation of the design.
+Our goal is to make everyday tools useful for everyone. We consider screen-reader access, clear navigation and readable interfaces from the start of development. For us, accessibility is not an add-on; it is the foundation of the design.
+
+## Our commitment
+
+- Accessibility features are never placed behind a paid upgrade in any of our apps.
+- We design new features together with VoiceOver, keyboard and larger text use.
+- We treat reported accessibility problems as a priority.
 
 ## In the apps
 
 - Apps with a detailed page list their supported devices and system version there; for the others, this information is on the App Store page.
 - Apps with a user guide explain step by step how to use them with VoiceOver.
-- Every app is different; accessibility level and language support vary from app to app. I don't present unverified features as promises.
+- Every app is different; accessibility level and language support vary from app to app. We don't present unverified features as promises.
 
 ## On this site
 

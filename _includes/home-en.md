@@ -3,11 +3,11 @@
 Accessible by design. Useful for everyone.
 {: .lead}
 
-Forali is a software brand founded in Türkiye by Recep Gür, developing apps for iPhone, iPad, and Mac. Our aim is to make technology more usable for more people, across everyday life, learning, and entertainment.
+Forali is an independent software brand developing apps and games for iPhone, iPad, and Mac. Our aim is to make technology more useful for everyone, across everyday life, learning, and entertainment.
 
 We consider accessibility from the start of design. We aim to reduce barriers for blind and low-vision users while creating simple, clear experiences for everyone.
 
-[Our purpose and plans](/en/about/) · [Our accessibility approach](/en/accessibility/) · [Support and contact](/en/contact/)
+[About us](/en/about/) · [Our accessibility approach](/en/accessibility/) · [Our privacy principles](/en/privacy/) · [Frequently asked questions](/en/faq/) · [Support and contact](/en/contact/)
 
 ## Apps
 

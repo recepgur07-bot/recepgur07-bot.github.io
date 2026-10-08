@@ -26,6 +26,8 @@
     <nav aria-label="{{ t.site_nav }}">
       <a class="brand" href="{{ home_url | relative_url }}"{% if page.url == home_url %} aria-current="page"{% endif %}>{{ site.title }} — {{ t.home }}</a>
       <a href="{{ t.accessibility_url | relative_url }}"{% if page.url == t.accessibility_url %} aria-current="page"{% endif %}>{{ t.accessibility }}</a>
+      <a href="{{ t.privacy_page_url | relative_url }}"{% if page.url == t.privacy_page_url %} aria-current="page"{% endif %}>{{ t.privacy_page }}</a>
+      <a href="{{ t.faq_url | relative_url }}"{% if page.url == t.faq_url %} aria-current="page"{% endif %}>{{ t.faq }}</a>
       <a href="{{ t.contact_url | relative_url }}"{% if page.url == t.contact_url %} aria-current="page"{% endif %}>{{ t.contact }}</a>
       <a href="{{ t.about_url | relative_url }}"{% if page.url == t.about_url %} aria-current="page"{% endif %}>{{ t.about }}</a>
       {%- if page.alt_url %}

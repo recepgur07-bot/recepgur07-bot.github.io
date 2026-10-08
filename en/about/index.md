@@ -4,19 +4,26 @@ layout: default
 lang: en
 title: About
 alt_url: /tr/hakkinda/
-description: Forali’s purpose, accessibility approach, and goals for artificial intelligence.
+description: Forali’s purpose, principles, accessibility approach, and future goals.
 ---
 # About
 
-Forali is a software brand founded in Türkiye by Recep Gür, developing apps for iPhone, iPad, and Mac. Our aim is to make technology more usable for more people, across everyday life, learning, and entertainment.
+Forali is an independent software brand developing apps and games for iPhone, iPad, and Mac. Our aim is to make technology more useful for everyone, across everyday life, learning, and entertainment.
 
 We consider accessibility from the start of design. We aim to reduce barriers for blind and low-vision users while creating simple, clear experiences for everyone.
 
 ## What are we building today?
 
-Our existing work includes photo gallery access with [Memora](/en/memora/), vocabulary learning with [Kelimelerim](/en/kelimelerim/), everyday tracking with [Folio](/en/folio/), and screen recording with [FrameMate](/en/framemate/). Our [Apps](/en/) page brings together our apps, App Store links, and support resources.
+Our existing work includes a calm puzzle game with [ReSort](/en/resort/), photo gallery access with [Memora](/en/memora/), vocabulary learning with [Kelimelerim](/en/kelimelerim/), everyday tracking with [Folio](/en/folio/), and screen recording with [FrameMate](/en/framemate/). Our [Apps](/en/) page brings together our apps, App Store links, and support resources.
 
-Forali is the shared brand for apps developed by Recep Gür. You may therefore see Recep Gür listed as the developer on the App Store.
+Our apps are published on the App Store under an individual developer account, so the seller name shown there is the account holder’s name rather than Forali.
+
+## Our principles
+
+- **Accessibility from the start:** We consider screen readers, keyboards and larger text at the beginning of the work, not at the end.
+- **Respect for privacy:** Not collecting your personal data is our default. Details are on the [Our privacy principles](/en/privacy/) page.
+- **Simplicity:** The purpose of each screen should be clear at a glance.
+- **Honest information:** We do not promise features we have not verified, and we state prices and limits clearly.
 
 ## What comes next?
 

@@ -8,13 +8,19 @@ description: Forali uygulamalarında ve bu sitede erişilebilirlik yaklaşımı,
 ---
 # Erişilebilirlik
 
-Amacım, günlük araçları daha çok kişi için kullanışlı yapmak. Uygulamalarımı geliştirirken ekran okuyucu erişimini, açık gezinmeyi ve okunabilir arayüzü işin başından düşünürüm. Erişilebilirlik bir ek özellik değil, tasarımın temelidir.
+Amacımız, günlük araçları herkes için kullanışlı hâle getirmek. Uygulamalarımızı geliştirirken ekran okuyucu erişimini, açık gezinmeyi ve okunabilir arayüzü işin başından ele alırız. Erişilebilirlik bizim için bir ek özellik değil, tasarımın temelidir.
+
+## Taahhüdümüz
+
+- Erişilebilirlik özellikleri hiçbir uygulamamızda ücretli sürümün arkasına konmaz.
+- Yeni özellikleri VoiceOver, klavye ve büyük yazıyla birlikte düşünürüz.
+- Bildirilen erişilebilirlik sorunlarını öncelikli ele alırız.
 
 ## Uygulamalarda
 
 - Ayrıntılı sayfası olan uygulamalarda desteklenen cihazlar ve sistem sürümü o sayfada yazılıdır; diğerlerinde bu bilgi App Store sayfasındadır.
 - Kullanım kılavuzu olan uygulamalarda kılavuz, uygulamanın VoiceOver ile nasıl kullanılacağını adım adım anlatır.
-- Uygulamalar birbirinden farklıdır; erişilebilirlik düzeyi ve dil desteği uygulamadan uygulamaya değişir. Doğrulanmamış bir özelliği kesin vaat olarak yazmam.
+- Uygulamalar birbirinden farklıdır; erişilebilirlik düzeyi ve dil desteği uygulamadan uygulamaya değişir. Doğrulanmamış bir özelliği kesin vaat olarak sunmayız.
 
 ## Bu sitede
 

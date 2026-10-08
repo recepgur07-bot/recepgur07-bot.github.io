@@ -25,7 +25,11 @@ tr:
   contact: Destek ve iletişim
   contact_url: /tr/iletisim/
   slogan: Tasarımdan itibaren erişilebilir. Herkes için kullanışlı.
-  footer_owner: Forali · Bağımsız geliştirici Recep Gür'ün uygulamaları
+  footer_owner: Forali
+  privacy_page: Gizlilik
+  privacy_page_url: /tr/gizlilik/
+  faq: Sık sorulan sorular
+  faq_url: /tr/sss/
 en:
   skip: Skip to content
   site_nav: Site
@@ -52,4 +56,8 @@ en:
   contact: Support and contact
   contact_url: /en/contact/
   slogan: Accessible by design. Useful for everyone.
-  footer_owner: Forali · Independent apps by Recep Gür
+  footer_owner: Forali
+  privacy_page: Privacy
+  privacy_page_url: /en/privacy/
+  faq: FAQ
+  faq_url: /en/faq/
