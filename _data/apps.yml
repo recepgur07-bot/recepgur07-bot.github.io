@@ -46,18 +46,20 @@
     requires: iOS 17 / macOS 14 or later
 
 - slug: kelimelerim
-  page: false
+  page: true
   appstore: https://apps.apple.com/app/id6799458502
   privacy: https://recepgur07-bot.github.io/kelimelerim-legal/
   support: https://recepgur07-bot.github.io/kelimelerim-legal/destek.html
   tr:
     name: "Kelimelerim: Kelime Ezberleme"
     subtitle: "YDS-YÖKDİL: A1-C2, 6 Oyunla"
+    audience: İngilizce kelime öğrenmek isteyen herkes için; VoiceOver desteğiyle
     platforms: iPhone ve iPad
     requires: iOS 17 veya sonrası
   en:
     name: "Kelimelerim: Learn Vocabulary"
     subtitle: 6 Games for English Vocabulary
+    audience: For Turkish speakers learning English, with VoiceOver support
     platforms: iPhone and iPad
     requires: iOS 17 or later
 

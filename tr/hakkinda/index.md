@@ -8,13 +8,13 @@ description: Forali’nin amacı, erişilebilirlik yaklaşımı ve yapay zekâ h
 ---
 # Hakkında
 
-Forali, iPhone, iPad ve Mac için uygulamalar geliştiren, Recep Gür tarafından kurulan bir yazılım markasıdır. Amacımız, günlük yaşamdan öğrenmeye ve eğlenceye kadar teknolojinin sunduğu olanakları daha fazla insan için kullanılabilir hâle getirmek.
+Forali, iPhone, iPad ve Mac için uygulamalar geliştiren, Türkiye'de Recep Gür tarafından kurulan bir yazılım markasıdır. Amacımız, günlük yaşamdan öğrenmeye ve eğlenceye kadar teknolojinin sunduğu olanakları daha fazla insan için kullanılabilir hâle getirmek.
 
 Erişilebilirliği tasarımın başlangıcından itibaren ele alıyoruz. Görme engelli ve az gören kullanıcıların karşılaştığı engelleri azaltırken, herkes için sade ve anlaşılır deneyimler geliştirmeyi hedefliyoruz.
 
 ## Bugün ne geliştiriyoruz?
 
-Mevcut çalışmalarımız arasında [Memora](/tr/memora/) ile fotoğraf galerisine erişim, Kelimelerim ile kelime öğrenme, [Folio](/tr/folio/) ile günlük takip ve [FrameMate](/tr/framemate/) ile ekran kaydı yer alıyor. Uygulamalarımızı, App Store bağlantılarını ve destek kaynaklarını [Uygulamalar](/tr/) sayfasında bir araya getiriyoruz.
+Mevcut çalışmalarımız arasında [Memora](/tr/memora/) ile fotoğraf galerisine erişim, [Kelimelerim](/tr/kelimelerim/) ile kelime öğrenme, [Folio](/tr/folio/) ile günlük takip ve [FrameMate](/tr/framemate/) ile ekran kaydı yer alıyor. Uygulamalarımızı, App Store bağlantılarını ve destek kaynaklarını [Uygulamalar](/tr/) sayfasında bir araya getiriyoruz.
 
 Forali, Recep Gür’ün geliştirdiği uygulamaların ortak marka çatısıdır. Bu nedenle App Store’da geliştirici adı olarak Recep Gür’ü görebilirsiniz.
 

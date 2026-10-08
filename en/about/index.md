@@ -8,13 +8,13 @@ description: Forali’s purpose, accessibility approach, and goals for artificia
 ---
 # About
 
-Forali is a software brand founded by Recep Gür, developing apps for iPhone, iPad, and Mac. Our aim is to make technology more usable for more people, across everyday life, learning, and entertainment.
+Forali is a software brand founded in Türkiye by Recep Gür, developing apps for iPhone, iPad, and Mac. Our aim is to make technology more usable for more people, across everyday life, learning, and entertainment.
 
 We consider accessibility from the start of design. We aim to reduce barriers for blind and low-vision users while creating simple, clear experiences for everyone.
 
 ## What are we building today?
 
-Our existing work includes photo gallery access with [Memora](/en/memora/), vocabulary learning with Kelimelerim, everyday tracking with [Folio](/en/folio/), and screen recording with [FrameMate](/en/framemate/). Our [Apps](/en/) page brings together our apps, App Store links, and support resources.
+Our existing work includes photo gallery access with [Memora](/en/memora/), vocabulary learning with [Kelimelerim](/en/kelimelerim/), everyday tracking with [Folio](/en/folio/), and screen recording with [FrameMate](/en/framemate/). Our [Apps](/en/) page brings together our apps, App Store links, and support resources.
 
 Forali is the shared brand for apps developed by Recep Gür. You may therefore see Recep Gür listed as the developer on the App Store.
 
