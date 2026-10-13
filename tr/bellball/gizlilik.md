@@ -7,11 +7,11 @@ lang: tr
 title: Bellball gizlilik politikası
 alt_url: /en/bellball/privacy/
 permalink: /tr/bellball/gizlilik/
-description: Bellball oyunundaki yerel kayıtlar, Game Center ve destek iletişimi hakkında gizlilik bilgileri.
+description: Bellball oyunundaki yerel kayıtlar, Game Center, satın alımlar ve destek iletişimi hakkında gizlilik bilgileri.
 ---
 # Bellball gizlilik politikası
 
-Son güncelleme: 10 Ekim 2026.
+Son güncelleme: 13 Ekim 2026.
 
 Bellball'da reklam, reklam takibi ve analitik SDK'sı yoktur. Forali, oyundaki etkinliğinizi kendi sunucularına göndermez.
 
@@ -24,6 +24,10 @@ Ayarlar, kariyer, yerel başarımlar, maç geçmişi ve oyun günlükleri cihaz�
 Karşılıklı maç isteğe bağlıdır ve Apple Game Center girişi gerektirir. Rakibiniz Game Center oyuncu adınızı görür. Maç sırasında atış, sonuç, duraklatma ve bağlantı mesajları diğer oyuncunun cihazına gönderilir. Bu verileri Forali'nin bir sunucusunda toplamayız. Game Center hesabı ve Apple'ın hizmet işlemleri [Apple'ın gizlilik politikasına](https://www.apple.com/legal/privacy/) tabidir.
 
 Yerel oyun için Game Center girişi gerekmez. Bu sürümde yerel başarımlar Game Center'a gönderilmez.
+
+## Satın alımlar ve iCloud
+
+Satın alımlar, deneme ve destekler Apple'ın App Store'u üzerinden yapılır; ödeme ve hesap bilgilerinizi Apple işler, Forali görmez. Oyun hangi ürünlere sahip olduğunuzu cihazda Apple'dan öğrenir. İlk açılış tarihi, ücretsiz sürümün ilk günlerini hesaplamak için cihazda ve iCloud hesabınızda (iCloud açıksa) tutulur; Forali'nin sunucusuna gönderilmez. Karşılıklı maçta yalnız "Tam Sürüm var mı" bilgisi rakibin cihazına gider, böylece ikiniz de sınırsız oynayabilirsiniz; ne satın aldığınızın ayrıntısı gönderilmez.
 
 ## Bize yazdığınızda
 
