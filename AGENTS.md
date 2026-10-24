@@ -38,6 +38,7 @@ uygulama kodu + fastlane/metadata      (gerçek)
 
 ## Zorunlu kurallar
 
+0. **Tek doğru kaynak Apple'dır.** Pazarlama, site, DURUM ve GitHub açıklamaları yazılmadan önce `apple-release-kit/bin/fleet` çalıştırılır; çelişkide Apple kazanır, her sürüm/ad/durum değişikliğinde bu dört yer birlikte güncellenir. Ürün adı tek yerde (Apple) belirlenir, diğerleri ondan türetilir.
 1. **Göndermeden önce `bin/denetle`** koşulur ve geçer (öz test → derleme → yapı → kaynak).
    Push'tan sonra `bin/adres-kontrol` App Store'a girili gizlilik/destek adreslerini ve
    App Store bağlantılarını canlıda sınar. Sayfa içindeki diğer dış bağlantılar

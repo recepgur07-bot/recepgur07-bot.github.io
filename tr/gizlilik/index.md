@@ -1,5 +1,6 @@
 ---
 source: apple-release-kit/config/APP_PRIVACY.tsv
+kaynak_karsilastirma: "2026-10-24 — APP_PRIVACY.tsv gözden geçirildi (Mergo adı, Harfoni ve Bellball yayında); tüm yayındaki uygulamalar hâlâ Data Not Collected, metin geçerli"
 layout: default
 lang: tr
 title: Gizlilik ilkelerimiz

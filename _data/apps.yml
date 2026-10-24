@@ -28,6 +28,42 @@
     platforms: iPhone and iPad
     requires: iOS 18 or later
 
+# Bellball: ad/alt başlık ASC canlı app-info (tr, en-US). Mac sürümü henüz yayında değil.
+- slug: bellball
+  category: oyun
+  page: false
+  appstore: https://apps.apple.com/app/id6821299495
+  privacy: https://forali.app/tr/bellball/gizlilik/
+  support: https://forali.app/tr/iletisim/
+  tr:
+    name: "Bellball: Sesli Penaltı"
+    subtitle: Erişilebilir Kaleci Düellosu
+    platforms: iPhone ve iPad
+    requires: iOS 18 veya sonrası
+  en:
+    name: "Bellball: Audio Soccer Penalty"
+    subtitle: Accessible Goalkeeper Duel
+    platforms: iPhone and iPad
+    requires: iOS 18 or later
+
+# Harfoni: App Store'da yalnız Türkçe yayında; en alt başlığı fastlane/metadata/en-US'ten.
+- slug: harfoni
+  category: oyun
+  page: false
+  appstore: https://apps.apple.com/app/id6759314762
+  privacy: https://forali.app/harfoni-privacy/
+  support: https://forali.app/harfoni-privacy/support.html
+  tr:
+    name: Harfoni
+    subtitle: Erişilebilir Kelime Macerası
+    platforms: iPhone ve iPad
+    requires: iOS 17 veya sonrası
+  en:
+    name: Harfoni
+    subtitle: Accessible Word Adventure
+    platforms: iPhone and iPad
+    requires: iOS 17 or later
+
 - slug: memora
   category: medya
   page: true

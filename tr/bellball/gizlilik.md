@@ -7,6 +7,7 @@ lang: tr
 title: Bellball gizlilik politikası
 alt_url: /en/bellball/privacy/
 permalink: /tr/bellball/gizlilik/
+kaynak_karsilastirma: "2026-10-24 — metin Bellball/docs/yayin/GIZLILIK.md ile birebir karşılaştırıldı, fark yok"
 description: Bellball oyunundaki yerel kayıtlar, Game Center, satın alımlar ve destek iletişimi hakkında gizlilik bilgileri.
 ---
 # Bellball gizlilik politikası

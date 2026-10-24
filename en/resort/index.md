@@ -22,28 +22,44 @@ Pick a tube, then tap the tube you want to pour into. Bring matching colors toge
 ## Play at your own pace
 
 - 100 main levels, followed by newly generated puzzles after level 100.
-- A new daily puzzle every day, with streaks and statistics to track your progress.
+- New daily puzzles every day: easy, medium and hard, plus a big Sunday puzzle on Sundays. Track your progress with streaks and statistics.
+- If you like, get a reminder for the daily puzzle at a time you choose, and share your result as plain text.
 - Undo a move, use a hint or restart whenever you like.
 - Learn the rules with a five-level tutorial.
 - No timers or move limits. Take your time to think.
 
-## Stars and themes
+## Earn stars, climb the ranks
 
-Finish levels in fewer moves to earn one to three stars. Your total stars unlock new backgrounds, with six themes to choose from. Light and dark appearance are supported. Undo and hints do not cost you stars.
+Finish levels in fewer moves to earn one to three stars. As you collect stars, you climb seven ranks from Apprentice to Legend; every new rank is celebrated and unlocks a new sound for each game moment. Your total stars also unlock new backgrounds. Undo and hints do not cost you stars.
+
+## Choose your sounds and music
+
+- Pick the sound for each of the game's 11 moments, such as selecting a tube, pouring and finishing a level. Each moment has 40 sounds in eight styles.
+- Swipe on a row and the sound plays right away and tells you how it unlocks; you can listen to locked sounds too.
+- Music box melodies play while you play. Set effects and music volume separately, and play tracks shuffled, in order or on repeat.
 
 ## Playable for everyone
 
 - Play by touch, with a keyboard or with VoiceOver.
 - Read tube contents with VoiceOver, find valid pour targets and adjust move announcements.
+- Make tubes bigger: Automatic, Large or Extra large tube size.
 - Use optional color symbols, sounds and haptic feedback.
 - Large text support and an interface in 51 languages.
+- Your progress syncs with iCloud across devices using the same Apple Account; you can turn it off.
 
 ## Price
 
-The first 10 main levels and daily puzzles on 10 different days are free; those days do not need to be consecutive. Full Version is a one-time in-app purchase. It unlocks all main levels from level 11, newly generated levels after level 100 and daily puzzles on additional days. No subscription.
+The first 10 main levels are free. The easy daily puzzle is free for everyone, every day. Medium, hard and Sunday puzzles are free on 10 different days, which do not need to be consecutive.
 
-Accessibility features, the tutorial, settings and statistics are always free. Background themes unlock with stars and are not sold separately.
+In-app purchases are one-time payments; there is no subscription:
+
+- **Full Version:** unlocks all main levels from level 11, newly generated levels after level 100 and medium, hard and Sunday daily puzzles on additional days.
+- **Sound Pack:** 33 more sounds for every game moment, 363 extra sounds in total.
+- **Music Pack:** 19 more music box melodies.
+- If you like, you can support the developer with a tip; a tip unlocks nothing.
+
+You can listen to every sound and track before you buy a pack. Accessibility features, the tutorial, settings and statistics are always free. Backgrounds unlock with stars, and rank sounds unlock with ranks.
 
 ## Privacy
 
-No ads. No data collected. No account needed.
+No ads. The developer collects no data. No account needed.
