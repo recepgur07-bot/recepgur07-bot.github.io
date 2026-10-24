@@ -32,6 +32,7 @@
 - slug: bellball
   category: oyun
   page: true
+  guide: true
   appstore: https://apps.apple.com/app/id6821299495
   privacy: https://forali.app/tr/bellball/gizlilik/
   support: https://forali.app/tr/iletisim/
@@ -50,6 +51,7 @@
 - slug: harfoni
   category: oyun
   page: true
+  guide: true
   appstore: https://apps.apple.com/app/id6759314762
   privacy: https://forali.app/harfoni-privacy/
   support: https://forali.app/harfoni-privacy/support.html
@@ -126,8 +128,8 @@
   category: gunluk
   page: false
   appstore: https://apps.apple.com/app/id6792310728
-  privacy: https://recepgur07-bot.github.io/oneday-support/tesbihim-privacy
-  support: https://recepgur07-bot.github.io/oneday-support/tesbihim-support
+  privacy: https://recepgur07-bot.github.io/tesbihim/gizlilik-politikasi.html
+  support: https://recepgur07-bot.github.io/tesbihim/destek.html
   tr:
     name: Tesbihim - Zikirmatik
     subtitle: Herkes İçin Erişilebilir Zikir

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Site listesini (_data/apps.yml) apple-release-kit kataloğuyla (config/KATALOG.json)
-karşılaştırır: ad (tr / en), App Store bağlantısı ve sayfalardaki arayüz dil sayısı.
+karşılaştırır: ad (tr / en), App Store bağlantısı, sayfalardaki arayüz dil sayısı
+(katalogdaki GERÇEK dil: uygulamanın kodundan sayılır; Apple'ın sayfa listesi bölge
+varyantlarını birleştirdiği için kullanılmaz) ve sayfada ülke sayısı yazıyorsa Apple'daki
+yayın ülkesi sayısı.
 Salt okunur; ağ istemez (katalog Apple'dan `apple-release-kit/bin/katalog` ile üretilir).
 
 Apple tek doğru kaynaktır: FARK çıkarsa site düzeltilir (önce kaynağına bakılır).
@@ -89,21 +92,35 @@ for a in apps_yml(Path(arg.apps).read_text(encoding="utf-8")):
     if link and a.get("appstore") != link:
         print(f"FARK  {slug} App Store: site {a.get('appstore')} / katalog {link}")
         fark += 1
-    sayi = (r.get("uygulama_dilleri") or {}).get("sayi")
+    gercek = r.get("uygulama_dilleri") or {}
+    sayi = gercek.get("sayi")
+    ulke = r.get("ulkeler") or {}
     for dil in ("tr", "en"):
         sayfa = SITE / dil / slug / "index.md"
         if not sayfa.exists():
             continue
-        m = re.search(r'app-links\.html[^%]*languages="([^"]+)"', sayfa.read_text(encoding="utf-8"))
-        if not m:
-            continue
-        if not isinstance(sayi, int):
-            print(f"UYARI {slug} dil ({dil}): katalogda arayüz dil sayısı BİLİNMİYOR")
+        metin = sayfa.read_text(encoding="utf-8")
+        m = re.search(r'app-links\.html[^%]*languages="([^"]+)"', metin)
+        if m:
+            if not isinstance(sayi, int):
+                print(f"UYARI {slug} dil ({dil}): katalogda gerçek arayüz dil sayısı BİLİNMİYOR")
+                uyari += 1
+            elif dil_sayisi(m.group(1)) != sayi:
+                print(f"FARK  {slug} dil ({dil}): sayfa '{m.group(1)}' / kodda {sayi} arayüz dili "
+                      f"({', '.join(gercek.get('kodlar') or [])})")
+                fark += 1
+        elif isinstance(sayi, int) and sayi == 1:
+            print(f"UYARI {slug} dil ({dil}): tek dilli uygulamada sayfada dil bilgisi yok "
+                  f"(kodda yalnız {', '.join(gercek.get('kodlar') or [])})")
             uyari += 1
-        elif dil_sayisi(m.group(1)) != sayi:
-            print(f"FARK  {slug} dil ({dil}): sayfa '{m.group(1)}' / Apple {sayi} arayüz dili "
-                  "(Apple dil kodlarını birleştirebilir; önce uygulamanın dil dosyasına bak)")
-            fark += 1
+        # Yalnız yayın ifadesi: "N ülkede", "N bölgede", "in N countries/regions".
+        for u in re.finditer(r"(\d+)\s*(?:ülkede|bölgede)|\bin\s+(\d+)\s+(?:countries|regions)", metin):
+            if ulke.get("durum") != "yayında":
+                print(f"FARK  {slug} ülke ({dil}): sayfa '{u.group(0)}' / Apple: {ulke.get('durum')}")
+                fark += 1
+            elif int(u.group(1) or u.group(2)) != ulke.get("sayi"):
+                print(f"FARK  {slug} ülke ({dil}): sayfa '{u.group(0)}' / Apple {ulke.get('sayi')} ülkede yayında")
+                fark += 1
     for alan, anahtar in (("privacy", "gizlilik"), ("support", "destek")):
         apple = (r.get("adresler") or {}).get(anahtar) or []
         apple = [apple] if isinstance(apple, str) else apple

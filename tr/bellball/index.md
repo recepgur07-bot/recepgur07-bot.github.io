@@ -11,7 +11,7 @@ description: Bellball, iPhone ve iPad'de sesle oynanan bir penaltı ve kaleci d�
 Şutu dinle. Köşeyi tut. Golü kurtar. Bellball, iPhone ve iPad'de sesle oynanan bir penaltı ve kaleci düellosudur: sırayla kaleyi korur ve şut çekersiniz, topun sesini takip ederek oynarsınız.
 {: .lead}
 
-{% include app-links.html slug="bellball" languages="16 dilde arayüz" %}
+{% include app-links.html slug="bellball" guide="/tr/bellball/kilavuz/" languages="16 dilde arayüz" %}
 
 Ekrana bakmadan oynanabilir ve VoiceOver desteği sunar. Kulaklıkla şutun yönünü daha net duyarsınız.
 

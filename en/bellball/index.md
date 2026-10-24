@@ -11,7 +11,7 @@ description: Bellball brings soccer penalties to your ears on iPhone and iPad. P
 Hear the shot. Choose your corner. Make the save. Bellball brings soccer penalties to your ears on iPhone and iPad: take turns keeping goal and shooting, with sound guiding every move.
 {: .lead}
 
-{% include app-links.html slug="bellball" languages="Interface in 16 languages" %}
+{% include app-links.html slug="bellball" guide="/en/bellball/guide/" languages="Interface in 16 languages" %}
 
 Play without looking at the screen, with VoiceOver support. Headphones make the direction of each shot clearer.
 

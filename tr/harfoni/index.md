@@ -11,7 +11,7 @@ description: Harfoni, erişilebilirlik odaklı bir Türkçe kelime oyunudur. Ver
 Harfoni, erişilebilirlik odaklı bir Türkçe kelime oyunudur. Verilen harflerden anlamlı kelimeler türetin, bölüm bölüm ilerleyin.
 {: .lead}
 
-{% include app-links.html slug="harfoni" %}
+{% include app-links.html slug="harfoni" guide="/tr/harfoni/kilavuz/" languages="Türkçe" %}
 
 ## Neler yapabilirsiniz
 

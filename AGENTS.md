@@ -48,7 +48,9 @@ uygulama kodu + fastlane/metadata      (gerçek)
    `tr/`, `en/`, `assets/` ve birkaç standart dosyaya izin verir; başka ad hata verir. App Store'a girilmiş gizlilik/destek sayfaları eski
    depolarda durur (`memora`, `folio-privacy`, `oneday-support`, `oneday-privacy`,
    `kelimelerim-legal`, …). Bu sitede kök düzeyde bu adlarla klasör açılmaz; içerik
-   yalnız `tr/` ve `en/` altındadır.
+   yalnız `tr/` ve `en/` altındadır. İstisna: ayrı deposu Pages yayınlamadığı için
+   Apple'a girili adresi bu sitede duran `resort-privacy/` ve `tesbihim/`
+   (`gizlilik-politikasi.html`, `destek.html`); bunlar Apple'daki adres değişmeden taşınmaz.
 4. **Yalnız yayındaki uygulamalar** listelenir. Yeni uygulama yayına girince
    `_data/apps.yml`'e eklenir; bilgi uydurulmaz, doğrulanamayan alan boş bırakılır.
    `bin/katalog-kontrol` apple-release-kit `PROJECTS.tsv`'deki uygulamaları Apple'ın herkese
@@ -58,6 +60,8 @@ uygulama kodu + fastlane/metadata      (gerçek)
    `bin/katalog-esitlik` (ağ istemez) ad, App Store bağlantısı, sayfadaki dil sayısı ve
    gizlilik/destek adresini `apple-release-kit/config/KATALOG.json` ile karşılaştırır; FARK
    çıkarsa Apple'a bakılarak düzeltilir, dil sayısı farkında önce uygulamanın dil dosyası okunur.
+   Dil sayısı Apple'ın gösterdiği değil koddan doğrulanan gerçek arayüz dilidir
+   (`uygulama_dilleri`); sayfada ülke sayısı yazıyorsa `ulkeler.sayi` ile karşılaştırılır.
 5. **Erişilebilirlik:** tek `h1`, sıralı başlıklar, doğru `lang`, "İçeriğe atla",
    uzun sayfada içindekiler ve "Başa dön", açılır alan için yalnız yerel `<details>`;
    temel bilgi kapalı alana saklanmaz. Bağlantı metni tek başına anlaşılır olur.

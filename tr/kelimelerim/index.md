@@ -11,7 +11,7 @@ description: Kelimelerim, 13.629 İngilizce kelimeyi A1'den C2'ye 6 farklı oyun
 Kelimelerim, İngilizce kelime dağarcığınızı 6 farklı oyunla, ezbersiz ve düzenli bir alışkanlığa dönüştürür. A1'den C2'ye 13.629 kelime, YDS, YÖKDİL ve YDT gibi sınavlarda sık çıkan kelimeler ve sınırsız kişisel liste tek uygulamada. Arayüz tamamen Türkçedir; VoiceOver ve sesli okumayla kullanılır.
 {: .lead}
 
-{% include app-links.html slug="kelimelerim" %}
+{% include app-links.html slug="kelimelerim" languages="Türkçe" %}
 
 {% include screenshots.html slug="kelimelerim" %}
 

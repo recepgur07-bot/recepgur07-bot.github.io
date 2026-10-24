@@ -11,7 +11,7 @@ description: Kelimelerim helps Turkish speakers learn 13,629 English words from 
 Kelimelerim turns learning English words into a game: 13,629 words across all six CEFR levels from A1 to C2, six game modes and unlimited personal lists. Words that commonly appear in Turkish exams such as YDS, YÖKDİL and YDT are included. The app interface is in Turkish, and it works with VoiceOver and spoken word playback.
 {: .lead}
 
-{% include app-links.html slug="kelimelerim" %}
+{% include app-links.html slug="kelimelerim" languages="Turkish interface" %}
 
 {% include screenshots.html slug="kelimelerim" %}
 

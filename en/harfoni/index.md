@@ -11,9 +11,9 @@ description: Harfoni is a Turkish word game designed with accessibility-first ga
 Harfoni is a Turkish word game designed with accessibility-first gameplay. Build meaningful words from the given letters and move forward chapter by chapter.
 {: .lead}
 
-{% include app-links.html slug="harfoni" %}
+{% include app-links.html slug="harfoni" guide="/en/harfoni/guide/" languages="Turkish only" %}
 
-The game is in Turkish: the words you build are Turkish words.
+The game is available in Turkish only: the interface, the menus and the words you build are all Turkish. The App Store page may list English as a language; that label is incorrect.
 
 ## What you can do
 
