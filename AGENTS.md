@@ -55,6 +55,9 @@ uygulama kodu + fastlane/metadata      (gerçek)
    açık arama servisine sorar ve site listesiyle karşılaştırır (EKSİK / FAZLA). Ağ ister;
    her push'tan sonra ve her uygulama yayınından sonra koşulur. FAZLA çıkan kayıt
    kullanıcıya sorulmadan silinmez.
+   `bin/katalog-esitlik` (ağ istemez) ad, App Store bağlantısı, sayfadaki dil sayısı ve
+   gizlilik/destek adresini `apple-release-kit/config/KATALOG.json` ile karşılaştırır; FARK
+   çıkarsa Apple'a bakılarak düzeltilir, dil sayısı farkında önce uygulamanın dil dosyası okunur.
 5. **Erişilebilirlik:** tek `h1`, sıralı başlıklar, doğru `lang`, "İçeriğe atla",
    uzun sayfada içindekiler ve "Başa dön", açılır alan için yalnız yerel `<details>`;
    temel bilgi kapalı alana saklanmaz. Bağlantı metni tek başına anlaşılır olur.
@@ -98,7 +101,7 @@ ihtiyacımızın çok üstündedir; asıl risk, git'in her eski sürümü saklam
 | `_includes/` | Uygulama bilgi kutusu, uygulama listesi |
 | `tr/<slug>/index.md`, `en/<slug>/index.md` | Genel bakış |
 | `tr/<slug>/kilavuz.md`, `en/<slug>/guide.md` | Kullanım kılavuzu |
-| `bin/` | `kur`, `onizle`, `denetle`, `yapi-kontrol`, `kaynak-kontrol`, `oz-test`, `adres-kontrol`, `katalog-kontrol` |
+| `bin/` | `kur`, `onizle`, `denetle`, `yapi-kontrol`, `kaynak-kontrol`, `oz-test`, `adres-kontrol`, `katalog-kontrol`, `katalog-esitlik` |
 
 ## Uygulama sayfası şablonu (Memora örneği)
 

@@ -31,7 +31,7 @@
 # Bellball: ad/alt başlık ASC canlı app-info (tr, en-US). Mac sürümü henüz yayında değil.
 - slug: bellball
   category: oyun
-  page: false
+  page: true
   appstore: https://apps.apple.com/app/id6821299495
   privacy: https://forali.app/tr/bellball/gizlilik/
   support: https://forali.app/tr/iletisim/
@@ -49,7 +49,7 @@
 # Harfoni: App Store'da yalnız Türkçe yayında; en alt başlığı fastlane/metadata/en-US'ten.
 - slug: harfoni
   category: oyun
-  page: false
+  page: true
   appstore: https://apps.apple.com/app/id6759314762
   privacy: https://forali.app/harfoni-privacy/
   support: https://forali.app/harfoni-privacy/support.html

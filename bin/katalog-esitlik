@@ -1,0 +1,119 @@
+#!/usr/bin/env python3
+"""Site listesini (_data/apps.yml) apple-release-kit kataloğuyla (config/KATALOG.json)
+karşılaştırır: ad (tr / en), App Store bağlantısı ve sayfalardaki arayüz dil sayısı.
+Salt okunur; ağ istemez (katalog Apple'dan `apple-release-kit/bin/katalog` ile üretilir).
+
+Apple tek doğru kaynaktır: FARK çıkarsa site düzeltilir (önce kaynağına bakılır).
+`bin/katalog-kontrol`'den ayrıdır; o, sitede eksik/fazla uygulama arar.
+
+Çıkış kodu: fark varsa 1, katalog yoksa 2, uyumluysa 0.
+Test için: --katalog <yol>, --apps <yol>.
+"""
+import argparse, json, re, sys
+from pathlib import Path
+
+SITE = Path(__file__).resolve().parent.parent
+ap = argparse.ArgumentParser()
+ap.add_argument("--katalog", default=str(SITE.parent / "apple-release-kit/config/KATALOG.json"))
+ap.add_argument("--apps", default=str(SITE / "_data/apps.yml"))
+arg = ap.parse_args()
+
+if not Path(arg.katalog).exists():
+    print(f"Katalog yok: {arg.katalog} (önce apple-release-kit/bin/katalog)")
+    sys.exit(2)
+katalog = json.loads(Path(arg.katalog).read_text(encoding="utf-8"))
+
+
+def apps_yml(text):
+    """apps.yml'in bu sitedeki basit biçimini okur (yaml modülü gerekmez)."""
+    kayitlar, kayit, dil = [], None, None
+    for satir in text.splitlines():
+        if not satir.strip() or satir.lstrip().startswith("#"):
+            continue
+        m = re.match(r"^- slug:\s*(\S+)", satir)
+        if m:
+            kayit = {"slug": m.group(1)}
+            kayitlar.append(kayit)
+            dil = None
+            continue
+        if kayit is None:
+            continue
+        m = re.match(r"^  (\w+):\s*(.*)$", satir)
+        if m:
+            anahtar, deger = m.groups()
+            if deger == "":
+                dil = anahtar
+                kayit[dil] = {}
+            else:
+                dil = None
+                kayit[anahtar] = deger.strip().strip('"')
+            continue
+        m = re.match(r"^    (\w+):\s*(.*)$", satir)
+        if m and dil:
+            kayit[dil][m.group(1)] = m.group(2).strip().strip('"')
+    return kayitlar
+
+
+def dil_sayisi(metin):
+    """'51 dilde arayüz', 'Interface in 51 languages' ya da virgüllü dil listesi."""
+    m = re.search(r"(\d+)", metin)
+    if m:
+        return int(m.group(1))
+    parcalar = re.split(r",|\bve\b|\band\b", metin)
+    return len([p for p in parcalar if p.strip()])
+
+
+kat = {}
+for r in katalog.get("uygulamalar", []):
+    slug = (r.get("site") or {}).get("slug")
+    if slug:
+        kat[slug] = r
+
+fark = 0
+uyari = 0
+for a in apps_yml(Path(arg.apps).read_text(encoding="utf-8")):
+    slug = a["slug"]
+    r = kat.get(slug)
+    if r is None:
+        print(f"FARK  {slug}: katalogda site karşılığı yok")
+        fark += 1
+        continue
+    yerel = r.get("yerel") or {}
+    for dil, loc in (("tr", "tr"), ("en", "en-US")):
+        apple = (yerel.get(loc) or {}).get("ad") or r.get("apple_adi")
+        site = (a.get(dil) or {}).get("name")
+        if apple and site != apple:
+            print(f"FARK  {slug} ad ({dil}): site '{site}' / Apple '{apple}'")
+            fark += 1
+    link = (r.get("linkler") or {}).get("genel")
+    if link and a.get("appstore") != link:
+        print(f"FARK  {slug} App Store: site {a.get('appstore')} / katalog {link}")
+        fark += 1
+    sayi = (r.get("uygulama_dilleri") or {}).get("sayi")
+    for dil in ("tr", "en"):
+        sayfa = SITE / dil / slug / "index.md"
+        if not sayfa.exists():
+            continue
+        m = re.search(r'app-links\.html[^%]*languages="([^"]+)"', sayfa.read_text(encoding="utf-8"))
+        if not m:
+            continue
+        if not isinstance(sayi, int):
+            print(f"UYARI {slug} dil ({dil}): katalogda arayüz dil sayısı BİLİNMİYOR")
+            uyari += 1
+        elif dil_sayisi(m.group(1)) != sayi:
+            print(f"FARK  {slug} dil ({dil}): sayfa '{m.group(1)}' / Apple {sayi} arayüz dili "
+                  "(Apple dil kodlarını birleştirebilir; önce uygulamanın dil dosyasına bak)")
+            fark += 1
+    for alan, anahtar in (("privacy", "gizlilik"), ("support", "destek")):
+        apple = (r.get("adresler") or {}).get(anahtar) or []
+        apple = [apple] if isinstance(apple, str) else apple
+        apple = [x for x in apple if x and x.startswith("http")]
+        # Eski recepgur07-bot.github.io adresleri forali.app'e yönlenir; aynı sayılır.
+        norm = lambda u: u.replace("recepgur07-bot.github.io", "forali.app").rstrip("/")
+        if apple and norm(a.get(alan, "")) not in {norm(x) for x in apple}:
+            print(f"UYARI {slug} {anahtar}: site {a.get(alan)} / Apple'a girili {', '.join(apple)}")
+            uyari += 1
+
+print(f"Sonuç: {fark} fark, {uyari} uyarı (katalog doğrulama: "
+      f"{katalog.get('olusturuldu_at') or katalog.get('dogrulandi_at') or 'BİLİNMİYOR'})")
+sys.exit(1 if fark else 0)
