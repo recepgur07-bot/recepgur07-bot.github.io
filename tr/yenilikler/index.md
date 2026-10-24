@@ -10,6 +10,26 @@ description: Forali'den yeni uygulama, önemli güncelleme ve site duyuruları.
 
 Yeni uygulamalarımızı, önemli güncellemeleri ve bu sitedeki değişiklikleri burada duyuruyoruz. En yeni duyuru en üsttedir.
 
+## 24 Ekim 2026: Tesbihim ve OneDay sayfaları
+
+Zikirmatik uygulamamız [Tesbihim](/tr/tesbihim/) ve geri sayım uygulamamız [OneDay](/tr/oneday/) için tanıtım sayfaları yayında.
+
+## 23 Ekim 2026: Folio 1.2.1
+
+[Folio](/tr/folio/) 1.2.1 ile her olay için ayrı ses seçebilir, para birimini seçebilir, yeni Gelir şablonunu kullanabilir; telefon numarası, e-posta ve web adreslerini tek dokunuşla açabilirsiniz. Sürümde VoiceOver eylem sırası da düzenlendi.
+
+## 21 Ekim 2026: Harfoni yayında
+
+Erişilebilirlik odaklı Türkçe kelime oyunumuz [Harfoni](/tr/harfoni/), iPhone ve iPad için App Store'da: [Harfoni'yi App Store'da görüntüleyin](https://apps.apple.com/app/id6759314762). Oyun yalnız Türkçedir; sitede [kullanım kılavuzu](/tr/harfoni/kilavuz/) da var.
+
+## 20 Ekim 2026: Bellball yayında
+
+Sesle oynanan penaltı oyunumuz [Bellball](/tr/bellball/), iPhone ve iPad için App Store'da: [Bellball'u App Store'da görüntüleyin](https://apps.apple.com/app/id6821299495). Sitede [kullanım kılavuzu](/tr/bellball/kilavuz/) ve gizlilik sayfası da var.
+
+## 19 Ekim 2026: ReSort 1.1.0
+
+[ReSort](/tr/resort/) 1.1.0 ile yedi rütbe, her oyun anı için seçilebilir sesler, arka plan müziği, iCloud eşitlemesi ve büyük tüp boyutu geldi. Ses ve müzik paketleri tek seferlik ödemelidir; oyun ve erişilebilirlik özellikleri herkese açıktır.
+
 ## 8 Ekim 2026: ReSort yayında
 
 Sakin ve reklamsız su sıralama bulmacamız [ReSort](/tr/resort/), iPhone ve iPad için App Store'da: [ReSort'u App Store'da görüntüleyin](https://apps.apple.com/app/id6819550779). Süre ve hamle sınırı yoktur; dokunarak, klavyeyle veya VoiceOver ile oynanmak üzere tasarlandı.

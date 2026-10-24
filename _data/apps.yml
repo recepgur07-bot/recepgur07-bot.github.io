@@ -126,7 +126,7 @@
 
 - slug: tesbihim
   category: gunluk
-  page: false
+  page: true
   appstore: https://apps.apple.com/app/id6792310728
   privacy: https://recepgur07-bot.github.io/tesbihim/gizlilik-politikasi.html
   support: https://recepgur07-bot.github.io/tesbihim/destek.html
@@ -161,7 +161,7 @@
 
 - slug: oneday
   category: gunluk
-  page: false
+  page: true
   appstore: https://apps.apple.com/app/id6756538962
   privacy: https://recepgur07-bot.github.io/oneday-privacy
   support: https://recepgur07-bot.github.io/oneday-support

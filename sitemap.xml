@@ -1,0 +1,24 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign sorted = site.pages | sort: "url" -%}
+{%- for p in sorted %}
+{%- if p.lang and p.noindex != true and p.layout == "default" %}
+  <url>
+    <loc>{{ p.url | absolute_url }}</loc>
+    {%- if p.alt_url %}
+    <xhtml:link rel="alternate" hreflang="{{ p.lang }}" href="{{ p.url | absolute_url }}"/>
+    {%- if p.lang == "en" %}
+    <xhtml:link rel="alternate" hreflang="tr" href="{{ p.alt_url | absolute_url }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ p.url | absolute_url }}"/>
+    {%- else %}
+    <xhtml:link rel="alternate" hreflang="en" href="{{ p.alt_url | absolute_url }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ p.alt_url | absolute_url }}"/>
+    {%- endif %}
+    {%- endif %}
+  </url>
+{%- endif %}
+{%- endfor %}
+</urlset>
