@@ -12,7 +12,7 @@ description: Bellball oyunundaki yerel kayıtlar, Game Center, satın alımlar v
 ---
 # Bellball gizlilik politikası
 
-Son güncelleme: 14 Ekim 2026.
+Son güncelleme: 22 Kasım 2026.
 
 Bellball'da reklam, reklam takibi ve analitik SDK'sı yoktur. Forali, oyundaki etkinliğinizi kendi sunucularına göndermez.
 
@@ -28,7 +28,7 @@ Yerel oyun için Game Center girişi gerekmez. Game Center'a giriş yaptıysanı
 
 ## Satın alımlar ve iCloud
 
-Satın alımlar, deneme ve destekler Apple'ın App Store'u üzerinden yapılır; ödeme ve hesap bilgilerinizi Apple işler, Forali görmez. Oyun hangi ürünlere sahip olduğunuzu cihazda Apple'dan öğrenir. iCloud açıksa oyun kaydınızın bir kopyası (ayarlar, kariyer, turnuva ve maç kayıtları, karşılıklı maç sonuçları, gönderilmeyi bekleyen skorlar) ve ücretsiz sürümün ilk günlerini hesaplamak için ilk açılış tarihi iCloud hesabınızda tutulur; böylece yeni cihazda veya yeniden kurulumda ilerlemeniz geri gelir. Bu bilgiler Forali'nin sunucusuna gönderilmez. Karşılıklı maçta yalnız "Tam Sürüm var mı" bilgisi rakibin cihazına gider, böylece ikiniz de sınırsız oynayabilirsiniz; ne satın aldığınızın ayrıntısı gönderilmez.
+Satın alımlar, deneme ve destekler Apple'ın App Store'u üzerinden yapılır; ödeme ve hesap bilgilerinizi Apple işler, Forali görmez. Oyun hangi ürünlere sahip olduğunuzu cihazda Apple'dan öğrenir. iCloud açıksa oyun kaydınızın bir kopyası (ayarlar, kariyer, turnuva ve maç kayıtları, karşılıklı maç sonuçları, gönderilmeyi bekleyen skorlar) ve ücretsiz sürümün ilk günlerini hesaplamak için ilk açılış tarihi iCloud hesabınızda tutulur; böylece yeni cihazda veya yeniden kurulumda ilerlemeniz geri gelir. İsteğe bağlı "Maç çağrılarını al" veya "Rakip çağır" özelliği kullanıldığında, yalnız anlık canlı eşleşme kurabilmek için Apple CloudKit ortak alanına geçici bir oda numarası ile maç biçimi yazılır (kullanıcı adı, e-posta, serbest metin veya takip bilgisi yazılmaz; Forali bu kaydı sizinle ilişkilendirmez). Kayıt, eşleşme olunca, çağrı iptal edilince ya da süresi (3 dakika) dolunca çağrıyı açan cihaz tarafından silinir. Bu bilgiler Forali'nin sunucusuna gönderilmez. Karşılıklı maçta yalnız "Tam Sürüm var mı" bilgisi rakibin cihazına gider, böylece ikiniz de sınırsız oynayabilirsiniz; ne satın aldığınızın ayrıntısı gönderilmez.
 
 ## Bize yazdığınızda
 

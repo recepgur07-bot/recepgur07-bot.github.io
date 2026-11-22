@@ -11,7 +11,7 @@ description: Privacy information about Bellball's local records, Game Center, pu
 ---
 # Bellball privacy policy
 
-Last updated: October 14, 2026.
+Last updated: November 22, 2026.
 
 Bellball has no ads, ad tracking or analytics SDKs. Forali does not send your gameplay activity to its own servers.
 
@@ -27,7 +27,7 @@ Local play does not require Game Center. If you are signed in to Game Center, yo
 
 ## Purchases and iCloud
 
-Purchases, the trial and support tips go through Apple's App Store; Apple handles your payment and account details, and Forali never sees them. The game learns which products you own from Apple on your device. If iCloud is on, a copy of your game save (settings, career, tournament and match records, head-to-head results and scores waiting to be submitted) and the first-launch date used to work out the free version's first days are kept in your iCloud account, so your progress returns on a new device or after reinstalling. This information is not sent to Forali's servers. In head-to-head matches only a yes/no "has the Full Version" flag goes to your opponent's device so you can both play without limits; no other purchase details are sent.
+Purchases, the trial and support tips go through Apple's App Store; Apple handles your payment and account details, and Forali never sees them. The game learns which products you own from Apple on your device. If iCloud is on, a copy of your game save (settings, career, tournament and match records, head-to-head results and scores waiting to be submitted) and the first-launch date used to work out the free version's first days are kept in your iCloud account, so your progress returns on a new device or after reinstalling. When the optional "Receive match calls" or "Call opponent" feature is used, only a temporary room code and match format are written to Apple's CloudKit public database to enable live matchmaking (no usernames, email addresses, free text or tracking data are stored, and Forali does not link the record to you). The device that opened the call deletes the record when a match is made, the call is cancelled or its 3 minutes run out. This information is not sent to Forali's servers. In head-to-head matches only a yes/no "has the Full Version" flag goes to your opponent's device so you can both play without limits; no other purchase details are sent.
 
 ## When you contact us
 
